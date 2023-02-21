@@ -1,0 +1,22 @@
+{
+  "name": "app_todo_ver.3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "type": "module"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ashmankevich/to_do_list.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ashmankevich/to_do_list/issues"
+  },
+  "homepage": "https://github.com/Ashmankevich/to_do_list#readme"
+}

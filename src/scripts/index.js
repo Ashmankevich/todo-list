@@ -1,8 +1,8 @@
-import { container } from "./container.js";
 import { getDate } from "./date.js";
+
 const root = document.getElementById("root");
-/*const container = document.createElement("div");
-container.className = "container";*/
+const container = document.createElement("div");
+container.className = "container";
 root.append(container);
 
 const mainItems = document.createElement("div");
@@ -116,7 +116,7 @@ function addTodoItem() {
   }
 }
 
-function getDate() {
+/*function getDate() {
   let date = new Date();
   let year = date.getFullYear();
   let month = date.getMonth();
@@ -124,7 +124,7 @@ function getDate() {
   let hour = date.getHours();
   let min = date.getMinutes();
   return `${day}/${month}/${year} - ${hour}:${min}`;
-}
+}*/
 
 btnAdd.addEventListener("click", addTodoItem);
 
