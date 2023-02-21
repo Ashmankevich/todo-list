@@ -1,0 +1,191 @@
+$colorBackgroundBtnPositive: green;
+$colorBackgroundBtnNegative: red;
+$colorBackgroundBtnNeutral: orange;
+$colorTextBtn: whitesmoke;
+$colorBtnHoverNegative: #e71414;
+$colorBtnActiveNegative: #ff4343;
+$colorBtnHoverPositive: rgb(53, 175, 53);
+$colorBtnActivePositive: rgb(54, 153, 54);
+$colorBtnHoverNeutral: rgba(238, 184, 84, 0.904);
+$colorBtnActiveNeutral: rgb(194, 163, 107);
+$colorText: white;
+
+@mixin Btn {
+  font-size: 18px;
+  line-height: 22px;
+  color: $colorTextBtn;
+  display: block;
+  text-transform: capitalize;
+  border-radius: 10px;
+  text-align: center;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+@mixin Input {
+  margin: 0 20px;
+  padding: 0 20px;
+  font-size: 14px;
+  line-height: 19px;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s linear 0s;
+  &:focus {
+    outline: 0;
+  }
+}
+
+body {
+  background-color: lightblue;
+}
+
+.container {
+  background-color: blueviolet;
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+  border-radius: 15px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.btn {
+  @include Btn();
+}
+.delete-all,
+.delete-last {
+  background-color: $colorBackgroundBtnNegative;
+  &:hover {
+    background-color: $colorBtnHoverNegative;
+  }
+  &:active {
+    background-color: $colorBtnActiveNegative;
+    box-shadow: 4px 4px 30px 0px $colorBtnActiveNegative;
+  }
+}
+.add {
+  flex: 0 1 15%;
+  background-color: $colorBackgroundBtnPositive;
+  &:hover {
+    background-color: $colorBtnHoverPositive;
+  }
+  &:active {
+    background-color: $colorBtnActivePositive;
+    box-shadow: 4px 4px 30px 0px $colorBtnActivePositive;
+  }
+}
+.main-items {
+  padding-top: 25px;
+  margin: 50px 0;
+}
+.input__enter-todo {
+  flex: 1 1 auto;
+  @include Input();
+}
+
+.input__search-todo {
+  flex: 0 1 30%;
+  @include Input();
+}
+
+.delete-all,
+.delete-last,
+.add,
+.show-all,
+.show-completed,
+.wrapper__all-count,
+.wrapper__completed {
+  margin: 0 15px;
+}
+
+.show-all,
+.show-completed {
+  flex: 0 1 15%;
+}
+
+.show-completed,
+.show-all {
+  background-color: $colorBackgroundBtnNeutral;
+  &:hover {
+    background-color: $colorBtnHoverNeutral;
+  }
+  &:active {
+    background-color: $colorBtnActiveNeutral;
+    box-shadow: 4px 4px 30px 0px $colorBtnActiveNeutral;
+  }
+}
+
+.addition-items {
+  padding-bottom: 25px;
+}
+
+.wrapper__all-count,
+.wrapper__completed {
+  display: flex;
+  align-self: center;
+}
+
+.text-count-name,
+.text-all-count,
+.text-completed-name,
+.text-all-completed {
+  color: $colorText;
+  font-size: 20px;
+  margin: 0;
+}
+
+.todo-item {
+  flex: 0 1 40%;
+  margin: 25px auto;
+  border: 3px solid black;
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.todo-input {
+   @include Input()
+}
+
+.list-todo {
+   flex-direction: column;
+}
+
+.todo-date{
+   color:$colorText;
+   font-size: 14px;
+   padding-top: 20px;
+}
+
+.todo-close{
+   flex-direction: column;
+   position: relative;
+}
+
+.btn-close {
+   position: absolute;
+   right: 0px;
+   top: -23px;
+   width: 32px;
+   height: 32px;
+   cursor: pointer;
+}
+
+.btn-close:before,
+.btn-close:after {
+   position: absolute;
+   left: 15px;
+   content: " ";
+   height: 33px;
+   width: 2px;
+   background-color: #ec7979;
+}
+.btn-close:before {
+   transform: rotate(45deg);
+}
+.btn-close:after {
+   transform: rotate(-45deg);
+}
