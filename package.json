@@ -2,21 +2,31 @@
   "name": "app_todo_ver.3",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "type": "module"
+   "dev": "parcel ./src/index.html",
+   "build": "parcel build ./src/index.html --no-source-maps",
+   "predeploy": "npm run dev",
+   "deploy": "gh-pages -d dev"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Ashmankevich/to_do_list.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+   "js",
+   "html",
+   "scc",
+   "scss"
+  ],
+  "author": "Andrew Ashmankevich",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Ashmankevich/to_do_list/issues"
   },
-  "homepage": "https://github.com/Ashmankevich/to_do_list#readme"
+  "homepage": "https://github.com/Ashmankevich/to_do_list#readme",
+  "devDependencies": {
+    "parcel": "^2.8.3",
+    "parcel-bundler": "^1.12.5"
+  }
 }
