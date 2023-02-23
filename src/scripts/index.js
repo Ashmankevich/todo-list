@@ -1,5 +1,15 @@
 import { getDate } from "./date.js";
 
+let allTasks;
+
+localStorage.allTasks === allTasks
+  ? (allTasks = [])
+  : (allTasks = JSON.parse(localStorage.getItem("allTasks")));
+
+function updateLocalStorage() {
+  localStorage.setItem("allTasks", JSON.stringify(allTasks));
+}
+
 const root = document.getElementById("root");
 const container = document.createElement("div");
 container.className = "container";
