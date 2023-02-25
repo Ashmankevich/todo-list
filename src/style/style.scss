@@ -38,6 +38,7 @@ $colorText: white;
 }
 
 body {
+  height: 3000px;
   background-color: lightblue;
 }
 
@@ -147,45 +148,45 @@ body {
 }
 
 .todo-input {
-   @include Input()
+  @include Input();
 }
 
 .list-todo {
-   flex-direction: column;
+  flex-direction: column;
 }
 
-.todo-date{
-   color:$colorText;
-   font-size: 14px;
-   padding-top: 20px;
+.todo-date {
+  color: $colorText;
+  font-size: 14px;
+  padding-top: 20px;
 }
 
-.todo-close{
-   flex-direction: column;
-   position: relative;
+.todo-close {
+  flex-direction: column;
+  position: relative;
 }
 
 .btn-close {
-   position: absolute;
-   right: 0px;
-   top: -23px;
-   width: 32px;
-   height: 32px;
-   cursor: pointer;
+  position: absolute;
+  right: 0px;
+  top: -23px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
 }
 
 .btn-close:before,
 .btn-close:after {
-   position: absolute;
-   left: 15px;
-   content: " ";
-   height: 33px;
-   width: 2px;
-   background-color: #ec7979;
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 2px;
+  background-color: #ec7979;
 }
 .btn-close:before {
-   transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 .btn-close:after {
-   transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
