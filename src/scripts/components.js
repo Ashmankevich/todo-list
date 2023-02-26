@@ -74,6 +74,6 @@ inputSearchTODO.className = "input__search-todo";
 inputSearchTODO.setAttribute("placeholder", "Search...");
 additionalItems.append(inputSearchTODO);
 
-export const listTodo = document.createElement("div");
+export const listTodo = document.createElement("ul");
 listTodo.className = "wrapper list-todo";
 container.append(listTodo);

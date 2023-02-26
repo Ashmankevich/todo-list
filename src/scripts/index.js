@@ -17,18 +17,17 @@ function getTask(description) {
   this.id = Date.now();
 }
 
-btnAdd.addEventListener("click", () => {
-  const wrapperTodoItem = document.createElement("div");
+btnAdd.addEventListener("click", (obj) => {
+  const wrapperTodoItem = document.createElement("li");
   wrapperTodoItem.className = "wrapper todo-item";
   listTodo.append(wrapperTodoItem);
 
-  const btnDone = document.createElement("button");
-  btnDone.className = "todo-btn-done";
-  wrapperTodoItem.append(btnDone);
-
   const textTodo = document.createElement("input");
   textTodo.className = "todo-input";
-  textTodo.setAttribute("placeholder", "Todo text...");
+  textTodo.classList.add("complete"); //change it, try - toggle
+  textTodo.setAttribute("placeholder", "Todo text..."); // why placeholder is empty??
+  textTodo.setAttribute("type", "checkbox");
+  textTodo.setAttribute("isChecked", obj.isChecked);
   wrapperTodoItem.append(textTodo);
 
   const wrapperCloseAndDate = document.createElement("div");
