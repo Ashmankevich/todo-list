@@ -1,5 +1,10 @@
 import { getDate } from "./date";
-import { btnAdd, btnDeleteAll, listTodo } from "./components.js";
+import {
+  btnAdd,
+  btnDeleteAll,
+  listTodo,
+  inputEnterTODO,
+} from "./components.js";
 
 let allTasks;
 
@@ -11,24 +16,54 @@ function updateLocalStorage() {
   localStorage.setItem("allTasks", JSON.stringify(allTasks));
 }
 
-function getTask(description) {
+// try below function later
+/*function getTask(description) {
   this.description = description;
   this.isChecked = false;
   this.id = Date.now();
+}*/
+
+function addItem() {
+  if (!inputEnterTODO.value.trim()) {
+    alert("Enter something ...");
+    inputEnterTODO.value = "";
+    return;
+  } else {
+    allTasks.push({
+      id: Date.now(),
+      isChecked: false,
+      text: inputEnterTODO.value,
+    });
+    updateLocalStorage();
+    inputEnterTODO.value = "";
+    renderTemplate();
+  }
 }
 
-btnAdd.addEventListener("click", (obj) => {
+function renderTemplate() {
+  listTodo.innerHTML = "";
+  allTasks.forEach((item) => {
+    createTemplate(item);
+  });
+}
+
+function createTemplate(obj) {
   const wrapperTodoItem = document.createElement("li");
   wrapperTodoItem.className = "wrapper todo-item";
+  wrapperTodoItem.setAttribute("id", obj.id);
   listTodo.append(wrapperTodoItem);
 
   const textTodo = document.createElement("input");
   textTodo.className = "todo-input";
   textTodo.classList.add("complete"); //change it, try - toggle
-  textTodo.setAttribute("placeholder", "Todo text..."); // why placeholder is empty??
   textTodo.setAttribute("type", "checkbox");
   textTodo.setAttribute("isChecked", obj.isChecked);
   wrapperTodoItem.append(textTodo);
+
+  let description = document.createElement("p");
+  description.className = "task_desc";
+  description.textContent = obj.text;
+  wrapperTodoItem.append(description);
 
   const wrapperCloseAndDate = document.createElement("div");
   wrapperCloseAndDate.className = "wrapper todo-close";
@@ -53,8 +88,13 @@ btnAdd.addEventListener("click", (obj) => {
   dateTodo.className = "todo-date";
   wrapperCloseAndDate.append(dateTodo);
   dateTodo.append(getDate());
-});
+}
 
-btnDeleteAll.addEventListener("click", () => {
+function deleteAllItems() {
+  allTasks = [];
   listTodo.innerHTML = "";
-});
+  updateLocalStorage();
+}
+
+btnAdd.addEventListener("click", addItem);
+btnDeleteAll.addEventListener("click", deleteAllItems);
