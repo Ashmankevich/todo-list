@@ -7,25 +7,25 @@ export const mainItems = document.createElement("div");
 mainItems.className = "wrapper main-items";
 container.append(mainItems);
 
-export const btnDeleteAll = document.createElement("button");
-btnDeleteAll.className = "btn delete-all";
-btnDeleteAll.textContent = "Delete All";
-mainItems.append(btnDeleteAll);
+export const deleteAll = document.createElement("button");
+deleteAll.className = "btn delete-all";
+deleteAll.textContent = "Delete All";
+mainItems.append(deleteAll);
 
-export const btnDeleteLast = document.createElement("button");
-btnDeleteLast.className = "btn delete-last";
-btnDeleteLast.textContent = "Delete Last";
-mainItems.append(btnDeleteLast);
+export const deleteLast = document.createElement("button");
+deleteLast.className = "btn delete-last";
+deleteLast.textContent = "Delete Last";
+mainItems.append(deleteLast);
 
 export const inputEnterTODO = document.createElement("input");
 inputEnterTODO.className = "input__enter-todo";
 inputEnterTODO.setAttribute("placeholder", "Enter todo...");
 mainItems.append(inputEnterTODO);
 
-export const btnAdd = document.createElement("button");
-btnAdd.className = "btn add";
-btnAdd.textContent = "Add";
-mainItems.append(btnAdd);
+export const add = document.createElement("button");
+add.className = "btn add";
+add.textContent = "Add";
+mainItems.append(add);
 
 export const additionalItems = document.createElement("div");
 additionalItems.className = "wrapper addition-items";
@@ -74,6 +74,6 @@ inputSearchTODO.className = "input__search-todo";
 inputSearchTODO.setAttribute("placeholder", "Search...");
 additionalItems.append(inputSearchTODO);
 
-export const listTodo = document.createElement("ul");
-listTodo.className = "wrapper list-todo";
-container.append(listTodo);
+export const listItems = document.createElement("ul");
+listItems.className = "wrapper list-todo";
+container.append(listItems);

@@ -1,8 +1,9 @@
 import { getDate } from "./date";
 import {
-  btnAdd,
-  btnDeleteAll,
-  listTodo,
+  add,
+  deleteAll,
+  deleteLast,
+  listItems,
   inputEnterTODO,
 } from "./components.js";
 
@@ -16,12 +17,13 @@ function updateLocalStorage() {
   localStorage.setItem("allTasks", JSON.stringify(allTasks));
 }
 
-// try below function later
-/*function getTask(description) {
-  this.description = description;
-  this.isChecked = false;
-  this.id = Date.now();
-}*/
+class getTask {
+  constructor() {
+    this.description = inputEnterTODO.value;
+    this.isChecked = false;
+    this.id = Date.now();
+  }
+}
 
 function addItem() {
   if (!inputEnterTODO.value.trim()) {
@@ -29,11 +31,7 @@ function addItem() {
     inputEnterTODO.value = "";
     return;
   } else {
-    allTasks.push({
-      id: Date.now(),
-      isChecked: false,
-      text: inputEnterTODO.value,
-    });
+    allTasks.push(new getTask());
     updateLocalStorage();
     inputEnterTODO.value = "";
     renderTemplate();
@@ -41,7 +39,7 @@ function addItem() {
 }
 
 function renderTemplate() {
-  listTodo.innerHTML = "";
+  listItems.innerHTML = "";
   allTasks.forEach((item) => {
     createTemplate(item);
   });
@@ -51,7 +49,7 @@ function createTemplate(obj) {
   const wrapperTodoItem = document.createElement("li");
   wrapperTodoItem.className = "wrapper todo-item";
   wrapperTodoItem.setAttribute("id", obj.id);
-  listTodo.append(wrapperTodoItem);
+  listItems.append(wrapperTodoItem);
 
   const textTodo = document.createElement("input");
   textTodo.className = "todo-input";
@@ -62,27 +60,23 @@ function createTemplate(obj) {
 
   let description = document.createElement("p");
   description.className = "task_desc";
-  description.textContent = obj.text;
+  description.textContent = obj.description;
   wrapperTodoItem.append(description);
 
   const wrapperCloseAndDate = document.createElement("div");
   wrapperCloseAndDate.className = "wrapper todo-close";
   wrapperTodoItem.append(wrapperCloseAndDate);
 
-  function getClose() {
-    const closeTodo = document.createElement("div");
-    closeTodo.className = "todo-close";
-    wrapperCloseAndDate.append(closeTodo);
-    const btnCloseTodo = document.createElement("span");
-    btnCloseTodo.className = "btn-close";
-    closeTodo.append(btnCloseTodo);
-
-    btnCloseTodo.addEventListener("click", () => {
-      wrapperTodoItem.style.backgroundColor = "pink";
-      setTimeout(() => wrapperTodoItem.remove(), 1000);
-    });
-  }
-  getClose();
+  const closeTodo = document.createElement("div");
+  closeTodo.className = "todo-close";
+  wrapperCloseAndDate.append(closeTodo);
+  const btnCloseTodo = document.createElement("span");
+  btnCloseTodo.className = "btn-close";
+  closeTodo.append(btnCloseTodo);
+  btnCloseTodo.addEventListener("click", () => {
+    wrapperTodoItem.style.backgroundColor = "pink";
+    setTimeout(() => wrapperTodoItem.remove(), 1000);
+  });
 
   const dateTodo = document.createElement("div");
   dateTodo.className = "todo-date";
@@ -92,9 +86,16 @@ function createTemplate(obj) {
 
 function deleteAllItems() {
   allTasks = [];
-  listTodo.innerHTML = "";
+  listItems.innerHTML = "";
   updateLocalStorage();
 }
 
-btnAdd.addEventListener("click", addItem);
-btnDeleteAll.addEventListener("click", deleteAllItems);
+function deleteLastItem() {
+  allTasks.pop();
+  renderTemplate();
+  updateLocalStorage();
+}
+
+add.addEventListener("click", addItem);
+deleteAll.addEventListener("click", deleteAllItems);
+deleteLast.addEventListener("click", deleteLastItem);
