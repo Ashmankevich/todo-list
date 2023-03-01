@@ -17,10 +17,10 @@ deleteLast.className = "btn delete-last";
 deleteLast.textContent = "Delete Last";
 mainItems.append(deleteLast);
 
-export const inputEnterTODO = document.createElement("input");
-inputEnterTODO.className = "input__enter-todo";
-inputEnterTODO.setAttribute("placeholder", "Enter todo...");
-mainItems.append(inputEnterTODO);
+export const enterItem = document.createElement("input");
+enterItem.className = "input__enter-todo";
+enterItem.setAttribute("placeholder", "Enter todo...");
+mainItems.append(enterItem);
 
 export const add = document.createElement("button");
 add.className = "btn add";

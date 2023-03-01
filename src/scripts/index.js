@@ -4,8 +4,9 @@ import {
   deleteAll,
   deleteLast,
   listItems,
-  inputEnterTODO,
+  enterItem,
 } from "./components.js";
+import { getTask } from "./getTask";
 
 let allTasks;
 
@@ -17,23 +18,15 @@ function updateLocalStorage() {
   localStorage.setItem("allTasks", JSON.stringify(allTasks));
 }
 
-class getTask {
-  constructor() {
-    this.description = inputEnterTODO.value;
-    this.isChecked = false;
-    this.id = Date.now();
-  }
-}
-
 function addItem() {
-  if (!inputEnterTODO.value.trim()) {
+  if (!enterItem.value.trim()) {
     alert("Enter something ...");
-    inputEnterTODO.value = "";
+    enterItem.value = "";
     return;
   } else {
     allTasks.push(new getTask());
     updateLocalStorage();
-    inputEnterTODO.value = "";
+    enterItem.value = "";
     renderTemplate();
   }
 }
@@ -73,9 +66,21 @@ function createTemplate(obj) {
   const btnCloseTodo = document.createElement("span");
   btnCloseTodo.className = "btn-close";
   closeTodo.append(btnCloseTodo);
-  btnCloseTodo.addEventListener("click", () => {
+  btnCloseTodo.addEventListener("click", (e) => {
     wrapperTodoItem.style.backgroundColor = "pink";
     setTimeout(() => wrapperTodoItem.remove(), 1000);
+    /*if (e.target.classList.contains("btn-close")) {
+      let parent = e.target.parentElement;
+      let id = +parent.getAttribute("id");
+      wrapperTodoItem.remove();
+      allTasks.forEach((item, index) => {
+        if (id === item.id) {
+          allTasks.splice(index, 1);
+        }
+      });
+
+      updateLocalStorage();
+    }*/
   });
 
   const dateTodo = document.createElement("div");
@@ -96,6 +101,11 @@ function deleteLastItem() {
   updateLocalStorage();
 }
 
+function pressedEnter(keyPressed) {
+  keyPressed.key === "Enter" ? addItem() : null;
+}
+
 add.addEventListener("click", addItem);
 deleteAll.addEventListener("click", deleteAllItems);
 deleteLast.addEventListener("click", deleteLastItem);
+enterItem.addEventListener("keydown", pressedEnter);
