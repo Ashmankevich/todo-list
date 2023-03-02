@@ -4,8 +4,7 @@ localStorage.allTasks === allTasks
   ? (allTasks = [])
   : (allTasks = JSON.parse(localStorage.getItem("allTasks")));
 
-function updateLocalStorage() {
+const updateLocalStorage = () =>
   localStorage.setItem("allTasks", JSON.stringify(allTasks));
-}
 
 export { allTasks, updateLocalStorage };

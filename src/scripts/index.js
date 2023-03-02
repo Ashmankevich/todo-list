@@ -7,22 +7,13 @@ import {
   enterItem,
 } from "./components.js";
 import { getTask } from "./getTask";
-
-let allTasks;
-
-localStorage.allTasks === allTasks
-  ? (allTasks = [])
-  : (allTasks = JSON.parse(localStorage.getItem("allTasks")));
-
-function updateLocalStorage() {
-  localStorage.setItem("allTasks", JSON.stringify(allTasks));
-}
+import { allTasks, updateLocalStorage } from "./localStorage";
 
 function addItem() {
-  if (!enterItem.value.trim()) {
+  let isEmpty = !enterItem.value.trim();
+  if (isEmpty) {
     alert("Enter something ...");
     enterItem.value = "";
-    return;
   } else {
     allTasks.push(new getTask());
     updateLocalStorage();
@@ -33,9 +24,7 @@ function addItem() {
 
 function renderTemplate() {
   listItems.innerHTML = "";
-  allTasks.forEach((item) => {
-    createTemplate(item);
-  });
+  allTasks.forEach((item) => createTemplate(item));
 }
 
 function createTemplate(obj) {
@@ -66,22 +55,6 @@ function createTemplate(obj) {
   const btnCloseTodo = document.createElement("span");
   btnCloseTodo.className = "btn-close";
   closeTodo.append(btnCloseTodo);
-  btnCloseTodo.addEventListener("click", (e) => {
-    wrapperTodoItem.style.backgroundColor = "pink";
-    setTimeout(() => wrapperTodoItem.remove(), 1000);
-    /*if (e.target.classList.contains("btn-close")) {
-      let parent = e.target.parentElement;
-      let id = +parent.getAttribute("id");
-      wrapperTodoItem.remove();
-      allTasks.forEach((item, index) => {
-        if (id === item.id) {
-          allTasks.splice(index, 1);
-        }
-      });
-
-      updateLocalStorage();
-    }*/
-  });
 
   const dateTodo = document.createElement("div");
   dateTodo.className = "todo-date";
@@ -105,7 +78,22 @@ function pressedEnter(keyPressed) {
   keyPressed.key === "Enter" ? addItem() : null;
 }
 
+function deleteItem(event) {
+  if (event.target.classList.contains("btn-close")) {
+    let parent = event.target.parentElement.parentElement.parentElement;
+    let id = Number(parent.getAttribute("id"));
+    parent.remove();
+
+    allTasks.forEach((item, index) =>
+      id === item.id ? allTasks.splice(index, 1) : null
+    );
+
+    updateLocalStorage();
+  }
+}
+
 add.addEventListener("click", addItem);
 deleteAll.addEventListener("click", deleteAllItems);
 deleteLast.addEventListener("click", deleteLastItem);
 enterItem.addEventListener("keydown", pressedEnter);
+listItems.addEventListener("click", deleteItem);
