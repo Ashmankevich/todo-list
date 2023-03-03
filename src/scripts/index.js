@@ -8,6 +8,7 @@ import {
 } from "./components.js";
 import { getTask } from "./getTask";
 import { allTasks, updateLocalStorage } from "./localStorage";
+import { update } from "./localStorage";
 
 function addItem() {
   let isEmpty = !enterItem.value.trim();
@@ -22,7 +23,7 @@ function addItem() {
   }
 }
 
-function renderTemplate() {
+export function renderTemplate() {
   listItems.innerHTML = "";
   allTasks.forEach((item) => createTemplate(item));
 }
@@ -92,6 +93,7 @@ function deleteItem(event) {
   }
 }
 
+window.addEventListener("load", update);
 add.addEventListener("click", addItem);
 deleteAll.addEventListener("click", deleteAllItems);
 deleteLast.addEventListener("click", deleteLastItem);
