@@ -31,26 +31,31 @@ export function renderTemplate() {
 }
 
 function createTemplate(obj) {
-  const wrapperTodoItem = document.createElement("li");
-  wrapperTodoItem.className = "wrapper todo-item";
-  wrapperTodoItem.setAttribute("id", obj.id);
-  listItems.append(wrapperTodoItem);
+  const wrapItem = document.createElement("li");
+  wrapItem.className = "wrapper todo-item";
+  wrapItem.setAttribute("id", obj.id);
+  listItems.append(wrapItem);
 
   const textTodo = document.createElement("input");
   textTodo.className = "todo-input";
-  textTodo.classList.add("complete"); //change it, try - toggle
   textTodo.setAttribute("type", "checkbox");
   textTodo.setAttribute("isChecked", obj.isChecked);
-  wrapperTodoItem.append(textTodo);
+  textTodo.checked = obj.isChecked;
+
+  obj.isChecked
+    ? wrapItem.classList.add("checked")
+    : wrapItem.classList.remove("checked");
+
+  wrapItem.append(textTodo);
 
   let description = document.createElement("p");
   description.className = "task_desc";
   description.textContent = obj.description;
-  wrapperTodoItem.append(description);
+  wrapItem.append(description);
 
   const wrapperCloseAndDate = document.createElement("div");
   wrapperCloseAndDate.className = "wrapper todo-close";
-  wrapperTodoItem.append(wrapperCloseAndDate);
+  wrapItem.append(wrapperCloseAndDate);
 
   const closeTodo = document.createElement("div");
   closeTodo.className = "todo-close";
@@ -97,9 +102,24 @@ function deleteItem(event) {
   getCount();
 }
 
+function completeItem(event) {
+  let parent = event.target.parentElement;
+  let id = Number(parent.getAttribute("id"));
+
+  event.target.checked
+    ? parent.classList.add("checked")
+    : parent.classList.remove("checked");
+
+  allTasks.forEach((item) => {
+    id === item.id ? (item.isChecked = !item.isChecked) : null;
+  });
+  updateLocalStorage();
+}
+
 window.addEventListener("load", update);
 add.addEventListener("click", addItem);
 deleteAll.addEventListener("click", deleteAllItems);
 deleteLast.addEventListener("click", deleteLastItem);
 enterItem.addEventListener("keydown", pressedEnter);
 listItems.addEventListener("click", deleteItem);
+listItems.addEventListener("change", completeItem);

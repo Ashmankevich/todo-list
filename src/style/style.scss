@@ -147,6 +147,10 @@ body {
   padding: 30px;
 }
 
+.checked {
+   background-color:pink;
+}
+
 .todo-input {
   @include Input();
 }
