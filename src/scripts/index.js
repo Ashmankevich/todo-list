@@ -15,7 +15,6 @@ function addItem() {
   let isEmpty = !enterItem.value.trim();
   if (isEmpty) {
     alert("Enter something ...");
-    enterItem.value = "";
   } else {
     allTasks.push(new getTask());
     updateLocalStorage();
@@ -36,17 +35,15 @@ function createTemplate(obj) {
   wrapItem.setAttribute("id", obj.id);
   listItems.append(wrapItem);
 
-  const textTodo = document.createElement("input");
-  textTodo.className = "todo-input";
-  textTodo.setAttribute("type", "checkbox");
-  textTodo.setAttribute("isChecked", obj.isChecked);
-  textTodo.checked = obj.isChecked;
+  const input = document.createElement("input");
+  input.className = "todo-input";
+  input.setAttribute("type", "checkbox");
+  input.setAttribute("isChecked", obj.isChecked);
+  input.checked = obj.isChecked;
 
-  obj.isChecked
-    ? wrapItem.classList.add("checked")
-    : wrapItem.classList.remove("checked");
+  obj.isChecked ? wrapItem.classList.toggle("checked") : null;
 
-  wrapItem.append(textTodo);
+  wrapItem.append(input);
 
   let description = document.createElement("p");
   description.className = "task_desc";
@@ -89,21 +86,22 @@ function pressedEnter(keyPressed) {
 }
 
 function deleteItem(event) {
-  if (event.target.classList.contains("btn-close")) {
-    let parent = event.target.parentElement.parentElement.parentElement;
-    let id = Number(parent.getAttribute("id"));
-    parent.remove();
+  if (event.target.className != "btn-close") return;
+  let parent = event.target.closest(".todo-item");
+  let id = Number(parent.getAttribute("id"));
+  parent.remove();
 
-    allTasks.forEach((item, index) => {
-      id === item.id ? allTasks.splice(index, 1) : null;
-    });
-  }
+  allTasks.forEach((item, index) => {
+    id === item.id ? allTasks.splice(index, 1) : null;
+  });
+
   updateLocalStorage();
   getCount();
 }
 
 function completeItem(event) {
-  let parent = event.target.parentElement;
+  if (event.target.className != "todo-input") return;
+  let parent = event.target.closest(".todo-item");
   let id = Number(parent.getAttribute("id"));
 
   event.target.checked
