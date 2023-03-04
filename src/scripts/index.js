@@ -9,6 +9,7 @@ import {
 import { getTask } from "./getTask";
 import { allTasks, updateLocalStorage } from "./localStorage";
 import { update } from "./localStorage";
+import { getCount } from "./getCount";
 
 function addItem() {
   let isEmpty = !enterItem.value.trim();
@@ -20,6 +21,7 @@ function addItem() {
     updateLocalStorage();
     enterItem.value = "";
     renderTemplate();
+    getCount();
   }
 }
 
@@ -64,15 +66,17 @@ function createTemplate(obj) {
 }
 
 function deleteAllItems() {
-  allTasks = [];
+  allTasks.splice(0);
   listItems.innerHTML = "";
   updateLocalStorage();
+  getCount();
 }
 
 function deleteLastItem() {
   allTasks.pop();
   renderTemplate();
   updateLocalStorage();
+  getCount();
 }
 
 function pressedEnter(keyPressed) {
@@ -85,12 +89,12 @@ function deleteItem(event) {
     let id = Number(parent.getAttribute("id"));
     parent.remove();
 
-    allTasks.forEach((item, index) =>
-      id === item.id ? allTasks.splice(index, 1) : null
-    );
-
-    updateLocalStorage();
+    allTasks.forEach((item, index) => {
+      id === item.id ? allTasks.splice(index, 1) : null;
+    });
   }
+  updateLocalStorage();
+  getCount();
 }
 
 window.addEventListener("load", update);

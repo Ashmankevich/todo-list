@@ -1,4 +1,6 @@
 import { renderTemplate } from ".";
+import { getCount } from "./getCount";
+
 let allTasks;
 
 const update = () => {
@@ -7,6 +9,7 @@ const update = () => {
   } else {
     allTasks = JSON.parse(localStorage.getItem("allTasks"));
     renderTemplate();
+    getCount();
   }
 };
 

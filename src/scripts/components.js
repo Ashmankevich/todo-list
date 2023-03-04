@@ -42,7 +42,6 @@ divAllCount.append(allCountName);
 
 export const allCount = document.createElement("p");
 allCount.className = "text-all-count";
-allCount.textContent = "0";
 divAllCount.append(allCount);
 
 export const completed = document.createElement("div");
@@ -56,7 +55,7 @@ completed.append(allCompletedName);
 
 export const allCompleted = document.createElement("p");
 allCompleted.className = "text-all-completed";
-allCompleted.textContent = "2";
+allCompleted.textContent = "0";
 completed.append(allCompleted);
 
 export const btnShowAll = document.createElement("button");
