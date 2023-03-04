@@ -10,6 +10,7 @@ import { getTask } from "./getTask";
 import { allTasks, updateLocalStorage } from "./localStorage";
 import { update } from "./localStorage";
 import { getCount } from "./getCount";
+import { completedCount } from "./completedCount";
 
 function addItem() {
   let isEmpty = !enterItem.value.trim();
@@ -111,6 +112,7 @@ function completeItem(event) {
   allTasks.forEach((item) => {
     id === item.id ? (item.isChecked = !item.isChecked) : null;
   });
+  completedCount();
   updateLocalStorage();
 }
 

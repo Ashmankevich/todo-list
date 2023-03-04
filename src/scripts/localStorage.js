@@ -1,5 +1,6 @@
 import { renderTemplate } from ".";
 import { getCount } from "./getCount";
+import { completedCount } from "./completedCount";
 
 let allTasks;
 
@@ -10,6 +11,7 @@ const update = () => {
     allTasks = JSON.parse(localStorage.getItem("allTasks"));
     renderTemplate();
     getCount();
+    completedCount();
   }
 };
 
