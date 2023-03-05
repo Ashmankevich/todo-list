@@ -103,13 +103,13 @@ body {
   margin: 0 15px;
 }
 
-.show-all,
+.hide-completed,
 .show-completed {
   flex: 0 1 15%;
 }
 
 .show-completed,
-.show-all {
+.hide-completed {
   background-color: $colorBackgroundBtnNeutral;
   &:hover {
     background-color: $colorBtnHoverNeutral;

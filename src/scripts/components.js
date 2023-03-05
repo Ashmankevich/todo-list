@@ -58,10 +58,10 @@ allCompleted.className = "text-all-completed";
 allCompleted.textContent = "0";
 completed.append(allCompleted);
 
-export const btnShowAll = document.createElement("button");
-btnShowAll.className = "btn show-all";
-btnShowAll.textContent = "Show All";
-additionalItems.append(btnShowAll);
+export const hideCompleted = document.createElement("button");
+hideCompleted.className = "btn hide-completed";
+hideCompleted.textContent = "Hide completed";
+additionalItems.append(hideCompleted);
 
 export const btnShowCompleted = document.createElement("button");
 btnShowCompleted.className = "btn show-completed";

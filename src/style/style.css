@@ -120,7 +120,7 @@ body {
   margin: 0 15px;
 }
 
-.show-all,
+.hide-completed,
 .show-completed {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 15%;
@@ -128,17 +128,17 @@ body {
 }
 
 .show-completed,
-.show-all {
+.hide-completed {
   background-color: orange;
 }
 
 .show-completed:hover,
-.show-all:hover {
+.hide-completed:hover {
   background-color: rgba(238, 184, 84, 0.904);
 }
 
 .show-completed:active,
-.show-all:active {
+.hide-completed:active {
   background-color: #c2a36b;
   -webkit-box-shadow: 4px 4px 30px 0px #c2a36b;
           box-shadow: 4px 4px 30px 0px #c2a36b;
