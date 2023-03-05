@@ -5,12 +5,15 @@ import {
   deleteLast,
   listItems,
   enterItem,
+  showCompleted,
+  hideCompleted,
 } from "./components.js";
 import { getTask } from "./getTask";
 import { allTasks, updateLocalStorage } from "./localStorage";
 import { update } from "./localStorage";
 import { getCount } from "./getCount";
-import { completedCount } from "./completedCount";
+import { hideItem } from "./hideItem";
+import { showItem } from "./showItem";
 
 function addItem() {
   let isEmpty = !enterItem.value.trim();
@@ -116,6 +119,9 @@ function completeItem(event) {
   updateLocalStorage();
 }
 
+hideItem();
+showItem();
+
 window.addEventListener("load", update);
 add.addEventListener("click", addItem);
 deleteAll.addEventListener("click", deleteAllItems);
@@ -123,3 +129,5 @@ deleteLast.addEventListener("click", deleteLastItem);
 enterItem.addEventListener("keydown", pressedEnter);
 listItems.addEventListener("click", deleteItem);
 listItems.addEventListener("change", completeItem);
+hideCompleted.addEventListener("click", hideItem);
+showCompleted.addEventListener("click", showItem);

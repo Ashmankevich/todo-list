@@ -1,6 +1,8 @@
 import { renderTemplate } from ".";
 import { getCount } from "./getCount";
 import { completedCount } from "./completedCount";
+import { hideItem } from "./hideItem";
+import { showItem } from "./showItem";
 
 let allTasks;
 
@@ -9,9 +11,11 @@ const update = () => {
     allTasks = [];
   } else {
     allTasks = JSON.parse(localStorage.getItem("allTasks"));
+    completedCount();
+    hideItem();
+    showItem();
     renderTemplate();
     getCount();
-    completedCount();
   }
 };
 

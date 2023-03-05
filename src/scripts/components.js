@@ -63,10 +63,10 @@ hideCompleted.className = "btn hide-completed";
 hideCompleted.textContent = "Hide completed";
 additionalItems.append(hideCompleted);
 
-export const btnShowCompleted = document.createElement("button");
-btnShowCompleted.className = "btn show-completed";
-btnShowCompleted.textContent = "Show Completed";
-additionalItems.append(btnShowCompleted);
+export const showCompleted = document.createElement("button");
+showCompleted.className = "btn show-completed";
+showCompleted.textContent = "Show Completed";
+additionalItems.append(showCompleted);
 
 export const inputSearchTODO = document.createElement("input");
 inputSearchTODO.className = "input__search-todo";
