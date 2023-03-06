@@ -42,6 +42,7 @@ divAllCount.append(allCountName);
 
 export const allCount = document.createElement("p");
 allCount.className = "text-all-count";
+allCount.textContent = "0";
 divAllCount.append(allCount);
 
 export const completed = document.createElement("div");

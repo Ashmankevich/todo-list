@@ -14,6 +14,7 @@ import { update } from "./localStorage";
 import { getCount } from "./getCount";
 import { hideItem } from "./hideItem";
 import { showItem } from "./showItem";
+import { completedCount } from "./completedCount";
 
 function addItem() {
   let isEmpty = !enterItem.value.trim();
@@ -76,13 +77,15 @@ function deleteAllItems() {
   listItems.innerHTML = "";
   updateLocalStorage();
   getCount();
+  completedCount();
 }
 
 function deleteLastItem() {
   allTasks.pop();
   renderTemplate();
-  updateLocalStorage();
   getCount();
+  completedCount();
+  updateLocalStorage();
 }
 
 function pressedEnter(keyPressed) {
