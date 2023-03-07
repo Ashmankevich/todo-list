@@ -7,6 +7,7 @@ import {
   enterItem,
   showCompleted,
   hideCompleted,
+  inputSearch,
 } from "./components.js";
 import { getTask } from "./getTask";
 import { allTasks, updateLocalStorage } from "./localStorage";
@@ -15,6 +16,7 @@ import { getCount } from "./getCount";
 import { hideItem } from "./hideItem";
 import { showItem } from "./showItem";
 import { completedCount } from "./completedCount";
+import { search } from "./search";
 
 function addItem() {
   let isEmpty = !enterItem.value.trim();
@@ -40,15 +42,15 @@ function createTemplate(obj) {
   wrapItem.setAttribute("id", obj.id);
   listItems.append(wrapItem);
 
-  const input = document.createElement("input");
-  input.className = "todo-input";
-  input.setAttribute("type", "checkbox");
-  input.setAttribute("isChecked", obj.isChecked);
-  input.checked = obj.isChecked;
+  const inputItem = document.createElement("input");
+  inputItem.className = "todo-input";
+  inputItem.setAttribute("type", "checkbox");
+  inputItem.setAttribute("isChecked", obj.isChecked);
+  inputItem.checked = obj.isChecked;
 
   obj.isChecked ? wrapItem.classList.toggle("checked") : null;
 
-  wrapItem.append(input);
+  wrapItem.append(inputItem);
 
   let description = document.createElement("p");
   description.className = "task_desc";
@@ -134,3 +136,4 @@ listItems.addEventListener("click", deleteItem);
 listItems.addEventListener("change", completeItem);
 hideCompleted.addEventListener("click", hideItem);
 showCompleted.addEventListener("click", showItem);
+inputSearch.addEventListener("input", search);

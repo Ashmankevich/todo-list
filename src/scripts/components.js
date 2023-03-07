@@ -69,10 +69,10 @@ showCompleted.className = "btn show-completed";
 showCompleted.textContent = "Show Completed";
 additionalItems.append(showCompleted);
 
-export const inputSearchTODO = document.createElement("input");
-inputSearchTODO.className = "input__search-todo";
-inputSearchTODO.setAttribute("placeholder", "Search...");
-additionalItems.append(inputSearchTODO);
+export const inputSearch = document.createElement("input");
+inputSearch.className = "input__search-todo";
+inputSearch.setAttribute("placeholder", "Search...");
+additionalItems.append(inputSearch);
 
 export const listItems = document.createElement("ul");
 listItems.className = "wrapper list-todo";
