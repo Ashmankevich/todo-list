@@ -69,6 +69,12 @@ body {
           box-shadow: 4px 4px 30px 0px #369936;
 }
 
+.add[disabled], .delete-last[disabled], .delete-all[disabled] {
+  color: #d2d5db;
+  background: #6c7589;
+  cursor: not-allowed;
+}
+
 .main-items {
   padding-top: 25px;
   margin: 50px 0;

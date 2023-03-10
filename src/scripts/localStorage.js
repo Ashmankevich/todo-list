@@ -2,6 +2,7 @@ import { renderTemplate } from ".";
 import { completedCount } from "./completedCount";
 import { getCount } from "./getCount";
 import { hideItem } from "./hideItem";
+import { unLock } from "./unLock";
 
 let allTasks;
 
@@ -10,6 +11,7 @@ function update() {
     allTasks = [];
   } else {
     allTasks = JSON.parse(localStorage.getItem("allTasks"));
+    unLock();
     renderTemplate();
     getCount();
     completedCount();
