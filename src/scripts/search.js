@@ -1,22 +1,12 @@
-import { renderTemplate } from ".";
-
 function search() {
-  let value = this.value.trim().toLowerCase();
+  let valueSearch = this.value.trim().toLowerCase();
   let items = document.querySelectorAll(".todo-item");
-  if (value != "") {
-    items.forEach((elem) => {
-      elem.textContent.toLowerCase().search(value) == -1
-        ? (elem.style.display = "none")
-        : null;
-    });
-  } else {
-    items.forEach((elem) => {
-      elem.textContent.toLowerCase().search(value) == -1
-        ? (elem.style.display = "flex")
-        : null;
-    });
-    renderTemplate();
-  }
+
+  items.forEach((elem) => {
+    elem.textContent.toLowerCase().indexOf(valueSearch) == -1
+      ? (elem.style.display = "none")
+      : (elem.style.display = "flex");
+  });
 }
 
 export { search };
