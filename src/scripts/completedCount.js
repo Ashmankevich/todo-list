@@ -1,4 +1,4 @@
-import { allCompleted } from "./components";
+import { allCompleted, showCompleted } from "./components";
 import { hideCompleted } from "./components";
 
 function completedCount() {
@@ -7,9 +7,13 @@ function completedCount() {
     completedCount.push(completed);
   }
   allCompleted.textContent = completedCount.length;
-  allCompleted.textContent == 0
-    ? hideCompleted.setAttribute("disabled", true)
-    : hideCompleted.removeAttribute("disabled");
+  if (allCompleted.textContent == 0) {
+    hideCompleted.setAttribute("disabled", true);
+    showCompleted.setAttribute("disabled", true);
+  } else {
+    hideCompleted.removeAttribute("disabled");
+    showCompleted.removeAttribute("disabled");
+  }
 }
 
 export { completedCount };

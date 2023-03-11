@@ -17,11 +17,13 @@ import { hideItem } from "./hideItem";
 import { showItem } from "./showItem";
 import { completedCount } from "./completedCount";
 import { search } from "./search";
+import { deleteLastItem } from "./deleteLast";
+import { deleteAllItems } from "./deleteAll";
 
 function addItem() {
   let isEmpty = !enterItem.value.trim();
   if (isEmpty) {
-    alert("Enter something ...");
+    confirm("If you want continue enter todo below...");
   } else {
     allTasks.push(new getTask());
     updateLocalStorage();
@@ -74,22 +76,6 @@ function createTemplate(obj) {
   dateTodo.append(getDate());
 }
 
-function deleteAllItems() {
-  allTasks.splice(0);
-  listItems.innerHTML = "";
-  updateLocalStorage();
-  getCount();
-  completedCount();
-}
-
-function deleteLastItem() {
-  allTasks.pop();
-  renderTemplate();
-  getCount();
-  completedCount();
-  updateLocalStorage();
-}
-
 function pressedEnter(keyPressed) {
   keyPressed.key === "Enter" ? addItem() : null;
 }
@@ -124,9 +110,6 @@ function completeItem(event) {
   completedCount();
   updateLocalStorage();
 }
-
-hideItem();
-showItem();
 
 window.addEventListener("load", update);
 add.addEventListener("click", addItem);
