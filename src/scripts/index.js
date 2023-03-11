@@ -72,9 +72,6 @@ function createTemplate(obj) {
   dateTodo.className = "todo-date";
   wrapperCloseAndDate.append(dateTodo);
   dateTodo.append(getDate());
-
-  deleteLast.removeAttribute("disabled");
-  deleteAll.removeAttribute("disabled");
 }
 
 function deleteAllItems() {
@@ -109,6 +106,7 @@ function deleteItem(event) {
 
   updateLocalStorage();
   getCount();
+  completedCount();
 }
 
 function completeItem(event) {

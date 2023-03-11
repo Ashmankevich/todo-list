@@ -79,10 +79,14 @@ body {
     box-shadow: 4px 4px 30px 0px $colorBtnActivePositive;
   }
 }
-.add[disabled], .delete-last[disabled], .delete-all[disabled]{
-      color: #d2d5db;
-      background: #6c7589;
-      cursor: not-allowed;
+.add[disabled],
+.delete-last[disabled],
+.delete-all[disabled],
+.hide-completed[disabled],
+.show-completed[disabled] {
+   color: #d2d5db;
+   background: #6c7589;
+   cursor: not-allowed;
 }
 .main-items {
   padding-top: 25px;
