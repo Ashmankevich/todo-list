@@ -73,7 +73,8 @@ body {
 .delete-last[disabled],
 .delete-all[disabled],
 .hide-completed[disabled],
-.show-completed[disabled] {
+.show-completed[disabled],
+.input__search-todo[disabled] {
   color: #d2d5db;
   background: #6c7589;
   cursor: not-allowed;

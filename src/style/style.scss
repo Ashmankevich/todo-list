@@ -83,10 +83,11 @@ body {
 .delete-last[disabled],
 .delete-all[disabled],
 .hide-completed[disabled],
-.show-completed[disabled] {
-   color: #d2d5db;
-   background: #6c7589;
-   cursor: not-allowed;
+.show-completed[disabled],
+.input__search-todo[disabled] {
+  color: #d2d5db;
+  background: #6c7589;
+  cursor: not-allowed;
 }
 .main-items {
   padding-top: 25px;
@@ -157,7 +158,7 @@ body {
 }
 
 .checked {
-   background-color:pink;
+  background-color: pink;
 }
 
 .todo-input {

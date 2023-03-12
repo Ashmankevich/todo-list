@@ -1,4 +1,4 @@
-import { renderTemplate } from ".";
+import { renderTemplate } from "./addItem";
 import { completedCount } from "./completedCount";
 import { getCount } from "./getCount";
 
