@@ -1,6 +1,5 @@
-import { renderTemplate } from "./addItem";
-import { completedCount } from "./completedCount";
-import { getCount } from "./getCount";
+import { renderTemplate } from "./components/buttons/addItem";
+import { completedCount, getCount } from "./components/counters";
 
 let allTasks;
 
