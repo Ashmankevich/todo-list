@@ -77,3 +77,26 @@ additionalItems.append(inputSearch);
 export const listItems = document.createElement("ul");
 listItems.className = "wrapper list-todo";
 container.append(listItems);
+
+export let modalWindowContainer = document.createElement("div");
+modalWindowContainer.id = "prompt-form-container";
+container.append(modalWindowContainer);
+
+export let modalWindowForm = document.createElement("form");
+modalWindowForm.id = "prompt-form";
+modalWindowContainer.append(modalWindowForm);
+
+export let modalWindowMessage = document.createElement("div");
+modalWindowMessage.id = "prompt-message";
+modalWindowForm.append(modalWindowMessage);
+
+export let modalWindowInputOK = document.createElement("input");
+modalWindowInputOK.type = "submit";
+modalWindowInputOK.value = "Ok";
+modalWindowForm.append(modalWindowInputOK);
+
+export let modalWindowInputCancel = document.createElement("input");
+modalWindowInputCancel.type = "button";
+modalWindowInputCancel.name = "cancel";
+modalWindowInputCancel.value = "Cancel";
+modalWindowForm.append(modalWindowInputCancel);
