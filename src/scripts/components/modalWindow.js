@@ -12,47 +12,33 @@ function hideCover() {
   document.body.style.overflowY = "";
 }
 
-/*<div id="prompt-form-container">
-<form id="prompt-form">
-  <div id="prompt-message"></div>
-  <input type="submit" value="Ok">
-  <input type="button" name="cancel" value="Отмена">
-</form>
-</div>*/
-
 function showPrompt(text) {
   showCover();
-  let container = document.getElementById("prompt-form-container");
-  let form = document.getElementById("prompt-form");
-  let message = document.getElementById("prompt-message");
+  let container = document.getElementById("confirm-wrap-container");
+  let wrap = document.getElementById("confirm-wrap");
+  let message = document.getElementById("confirm-message");
   message.innerHTML = text;
 
   function complete() {
     hideCover();
     container.style.display = "none";
+    document.onkeydown = null;
   }
 
-  form.addEventListener("submit", handlerForm);
-  function handlerForm() {
+  wrap.ok.addEventListener("click", () => {
     deleteAllItems();
-    let value = form.elements.textInput.value;
-    if (!value == "") {
-      complete(value);
-    } else return false;
-  }
+    complete();
+  });
 
-  form.cancel.addEventListener("click", handlerCancel);
-  function handlerCancel() {
-    complete(null);
-  }
+  wrap.cancel.addEventListener("click", () => complete(null));
 
   document.addEventListener("keydown", handlerKey);
   function handlerKey(e) {
     e.key == "Escape" ? complete(null) : null;
   }
 
-  let lastElem = form.elements[form.elements.length - 1];
-  let firstElem = form.elements[0];
+  let lastElem = wrap.elements[wrap.elements.length - 1];
+  let firstElem = wrap.elements[0];
 
   lastElem.onkeydown = function (e) {
     if (e.key == "Tab" && !e.shiftKey) {

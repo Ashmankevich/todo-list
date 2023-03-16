@@ -79,24 +79,27 @@ listItems.className = "wrapper list-todo";
 container.append(listItems);
 
 export let modalWindowContainer = document.createElement("div");
-modalWindowContainer.id = "prompt-form-container";
+modalWindowContainer.id = "confirm-wrap-container";
 container.append(modalWindowContainer);
 
-export let modalWindowForm = document.createElement("form");
-modalWindowForm.id = "prompt-form";
-modalWindowContainer.append(modalWindowForm);
+export let modalWindowWrap = document.createElement("form");
+modalWindowWrap.id = "confirm-wrap";
+modalWindowContainer.append(modalWindowWrap);
 
-export let modalWindowMessage = document.createElement("div");
-modalWindowMessage.id = "prompt-message";
-modalWindowForm.append(modalWindowMessage);
+export let modalWindowMessage = document.createElement("p");
+modalWindowMessage.id = "confirm-message";
+modalWindowWrap.append(modalWindowMessage);
 
-export let modalWindowInputOK = document.createElement("input");
-modalWindowInputOK.type = "submit";
-modalWindowInputOK.value = "Ok";
-modalWindowForm.append(modalWindowInputOK);
+export let modalWindowOK = document.createElement("button");
+modalWindowOK.type = "button";
+modalWindowOK.className = "button__ok";
+modalWindowOK.name = "ok";
+modalWindowOK.textContent = "Ok";
+modalWindowWrap.append(modalWindowOK);
 
-export let modalWindowInputCancel = document.createElement("input");
-modalWindowInputCancel.type = "button";
-modalWindowInputCancel.name = "cancel";
-modalWindowInputCancel.value = "Cancel";
-modalWindowForm.append(modalWindowInputCancel);
+export let modalWindowCancel = document.createElement("button");
+modalWindowCancel.type = "button";
+modalWindowCancel.className = "button__cancel";
+modalWindowCancel.name = "cancel";
+modalWindowCancel.textContent = "Cancel";
+modalWindowWrap.append(modalWindowCancel);

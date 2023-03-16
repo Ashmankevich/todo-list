@@ -256,16 +256,16 @@ body {
           transform: rotate(-45deg);
 }
 
-#prompt-form {
+#confirm-wrap {
   display: inline-block;
-  padding: 5px 5px 5px 70px;
+  padding: 30px;
   width: 200px;
   border: 1px solid black;
-  background: white url(https://en.js.cx/clipart/prompt.png) no-repeat left 5px;
+  background: pink;
   vertical-align: middle;
 }
 
-#prompt-form-container {
+#confirm-wrap-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -276,7 +276,7 @@ body {
   text-align: center;
 }
 
-#prompt-form-container:before {
+#confirm-wrap-container:before {
   display: inline-block;
   height: 100%;
   content: '';
@@ -292,5 +292,9 @@ body {
   height: 100%;
   background-color: gray;
   opacity: 0.8;
+}
+
+.button__ok, .button__cancel {
+  background-color: yellow;
 }
 /*# sourceMappingURL=style.css.map */
