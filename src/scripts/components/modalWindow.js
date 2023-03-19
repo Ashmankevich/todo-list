@@ -12,11 +12,13 @@ function hideCover() {
   document.body.style.overflowY = "";
 }
 
-function showPrompt(text) {
+function showModal(text) {
   showCover();
   let container = document.getElementById("confirm-wrap-container");
-  let wrap = document.getElementById("confirm-wrap");
   let message = document.getElementById("confirm-message");
+  let buttonOk = document.querySelector(".button__ok");
+  let buttonCancel = document.querySelector(".button__cancel");
+
   message.innerHTML = text;
 
   function complete() {
@@ -25,31 +27,27 @@ function showPrompt(text) {
     document.onkeydown = null;
   }
 
-  wrap.ok.addEventListener("click", () => {
+  buttonOk.addEventListener("click", () => {
     deleteAllItems();
     complete();
   });
 
-  wrap.cancel.addEventListener("click", () => complete(null));
+  buttonCancel.addEventListener("click", () => complete(null));
 
-  document.addEventListener("keydown", handlerKey);
-  function handlerKey(e) {
+  document.addEventListener("keydown", function (e) {
     e.key == "Escape" ? complete(null) : null;
-  }
+  });
 
-  let lastElem = wrap.elements[wrap.elements.length - 1];
-  let firstElem = wrap.elements[0];
-
-  lastElem.onkeydown = function (e) {
-    if (e.key == "Tab" && !e.shiftKey) {
-      firstElem.focus();
+  buttonOk.onkeydown = function (e) {
+    if (e.key == "Tab" && e.shiftKey) {
+      buttonCancel.focus();
       return false;
     }
   };
 
-  firstElem.onkeydown = function (e) {
-    if (e.key == "Tab" && e.shiftKey) {
-      lastElem.focus();
+  buttonCancel.onkeydown = function (e) {
+    if (e.key == "Tab" && !e.shiftKey) {
+      buttonOk.focus();
       return false;
     }
   };
@@ -58,7 +56,7 @@ function showPrompt(text) {
 }
 
 function showModalWindow() {
-  showPrompt("You delete all items for ever. Are you sure?");
+  showModal("You delete all items for ever. Are you sure?");
 }
 
 export { showModalWindow };

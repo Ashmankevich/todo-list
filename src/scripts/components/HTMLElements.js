@@ -82,7 +82,7 @@ export let modalWindowContainer = document.createElement("div");
 modalWindowContainer.id = "confirm-wrap-container";
 container.append(modalWindowContainer);
 
-export let modalWindowWrap = document.createElement("form");
+export let modalWindowWrap = document.createElement("div");
 modalWindowWrap.id = "confirm-wrap";
 modalWindowContainer.append(modalWindowWrap);
 
