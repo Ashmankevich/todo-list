@@ -2,6 +2,7 @@ import { enterItem, listItems } from "../HTMLElements";
 import { allTasks, updateLocalStorage } from "../../localStorage";
 import { getCount } from "../counters";
 import { getDate } from "../date";
+import { showModalWindowAttention } from "../modalWindows/showModalWindowAttention";
 
 class getTask {
   constructor() {
@@ -14,7 +15,7 @@ class getTask {
 function addItem() {
   let isEmpty = !enterItem.value.trim();
   if (isEmpty) {
-    confirm("If you want continue enter todo below...");
+    showModalWindowAttention();
   } else {
     allTasks.push(new getTask());
     updateLocalStorage();
