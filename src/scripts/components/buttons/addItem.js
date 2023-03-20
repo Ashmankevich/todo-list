@@ -42,13 +42,18 @@ function createTemplate(obj) {
 
   const inputItem = document.createElement("input");
   inputItem.className = "todo-input";
+  inputItem.id = "custom";
   inputItem.setAttribute("type", "checkbox");
   inputItem.setAttribute("isChecked", obj.isChecked);
   inputItem.checked = obj.isChecked;
 
+  const labelInputItem = document.createElement("label");
+  labelInputItem.setAttribute("for", "custom");
+
   obj.isChecked ? wrapItem.classList.toggle("checked") : null;
 
   wrapItem.append(inputItem);
+  wrapItem.append(labelInputItem);
 
   let description = document.createElement("p");
   description.className = "task_desc";
