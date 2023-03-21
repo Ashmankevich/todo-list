@@ -3,7 +3,6 @@ import {
   deleteAll,
   deleteLast,
   listItems,
-  enterItem,
   showCompleted,
   hideCompleted,
   inputSearch,
@@ -22,7 +21,7 @@ window.addEventListener("load", update);
 add.addEventListener("click", addItem);
 deleteAll.addEventListener("click", showModalWindowDelete);
 deleteLast.addEventListener("click", deleteLastItem);
-enterItem.addEventListener("keydown", pressedEnter);
+document.addEventListener("keydown", pressedEnter);
 listItems.addEventListener("click", deleteItem);
 listItems.addEventListener("change", completeItem);
 hideCompleted.addEventListener("click", hideItem);
