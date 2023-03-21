@@ -37,28 +37,26 @@ function renderTemplate() {
 function createTemplate(obj) {
   const wrapItem = document.createElement("li");
   wrapItem.className = "wrapper todo-item";
-  wrapItem.setAttribute("id", obj.id);
+  wrapItem.id = obj.id;
   listItems.append(wrapItem);
 
   const inputItem = document.createElement("input");
   inputItem.className = "todo-input";
-  inputItem.id = "custom";
-  inputItem.setAttribute("type", "checkbox");
-  inputItem.setAttribute("isChecked", obj.isChecked);
+  inputItem.type = "checkbox";
   inputItem.checked = obj.isChecked;
 
   const labelInputItem = document.createElement("label");
-  labelInputItem.setAttribute("for", "custom");
+  labelInputItem.className = "custom-checkbox";
 
   obj.isChecked ? wrapItem.classList.toggle("checked") : null;
 
-  wrapItem.append(inputItem);
   wrapItem.append(labelInputItem);
+  labelInputItem.append(inputItem);
 
-  let description = document.createElement("p");
+  let description = document.createElement("span");
   description.className = "task_desc";
   description.textContent = obj.description;
-  wrapItem.append(description);
+  labelInputItem.append(description);
 
   const wrapperCloseAndDate = document.createElement("div");
   wrapperCloseAndDate.className = "wrapper todo-close";
