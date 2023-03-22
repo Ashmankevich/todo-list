@@ -1,3 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Raleway&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  outline: none;
+}
+
 body {
   height: 3000px;
   background-color: lightblue;
@@ -191,6 +201,10 @@ body {
   background-color: pink;
 }
 
+.checked.task_desc {
+  text-decoration: line-through;
+}
+
 .list-todo {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -243,11 +257,17 @@ body {
 
 #confirm-wrap {
   display: inline-block;
-  padding: 30px;
-  width: 200px;
-  border: 1px solid black;
-  background: pink;
+  padding: 60px;
+  width: 400px;
+  border-radius: 30px;
+  background: #52597a;
   vertical-align: middle;
+}
+
+#confirm-message {
+  font-size: 25px;
+  color: white;
+  margin-bottom: 40px;
 }
 
 #confirm-wrap-container {
@@ -275,13 +295,41 @@ body {
   z-index: 9000;
   width: 100%;
   height: 100%;
-  background-color: gray;
-  opacity: 0.8;
+  background-color: #312e2e;
+  opacity: 0.9;
 }
 
 .button__ok,
 .button__cancel {
-  background-color: yellow;
+  border: none;
+  max-width: 100px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #646a7a;
+}
+
+.button__ok:hover,
+.button__cancel:hover {
+  cursor: pointer;
+  background-color: #7683a5;
+}
+
+.button__ok:active,
+.button__cancel:active {
+  -webkit-box-shadow: 0px 0px 10px 0px #4c64a0 inset;
+          box-shadow: 0px 0px 10px 0px #4c64a0 inset;
+  background-color: #4c64a0;
+}
+
+.button__ok {
+  margin-right: 10px;
+}
+
+.button__cancel {
+  margin-left: 10px;
 }
 
 .custom-checkbox > input {
@@ -304,7 +352,7 @@ body {
 }
 
 .custom-checkbox > span::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 1em;
   height: 1em;

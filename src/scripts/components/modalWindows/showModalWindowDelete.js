@@ -3,7 +3,7 @@ import { deleteAllItems } from "../buttons/deleteAll";
 import { complete } from "./modalWindow";
 
 function showModalWindowDelete() {
-  showModal("You delete all items for ever. Are you sure?");
+  showModal("You are going to delete all tasks. Are you sure?");
 
   let btnOK = document.querySelector(".button__ok");
 

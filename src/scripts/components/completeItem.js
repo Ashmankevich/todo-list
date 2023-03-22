@@ -6,9 +6,11 @@ function completeItem(event) {
   let parent = event.target.closest(".todo-item");
   let id = Number(parent.getAttribute("id"));
 
-  event.target.checked
-    ? parent.classList.add("checked")
-    : parent.classList.remove("checked");
+  if (event.target.checked) {
+    parent.classList.add("checked");
+  } else {
+    parent.classList.remove("checked");
+  }
 
   allTasks.forEach((item) => {
     id === item.id ? (item.isChecked = !item.isChecked) : null;
