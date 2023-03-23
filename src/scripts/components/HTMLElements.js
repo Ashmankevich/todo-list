@@ -3,9 +3,13 @@ export const container = document.createElement("div");
 container.className = "container";
 root.append(container);
 
+export const row = document.createElement("div");
+row.className = "row";
+container.append(row);
+
 export const mainItems = document.createElement("div");
 mainItems.className = "wrapper main-items";
-container.append(mainItems);
+row.append(mainItems);
 
 export const deleteAll = document.createElement("button");
 deleteAll.className = "btn delete-all";
@@ -29,7 +33,7 @@ mainItems.append(add);
 
 export const additionalItems = document.createElement("div");
 additionalItems.className = "wrapper addition-items";
-container.append(additionalItems);
+row.append(additionalItems);
 
 export const divAllCount = document.createElement("div");
 divAllCount.className = "wrapper__all-count";

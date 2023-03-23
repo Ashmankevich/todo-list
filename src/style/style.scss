@@ -8,9 +8,9 @@
   outline: none;
 }
 
-$colorBackgroundBtnPositive: green;
-$colorBackgroundBtnNegative: red;
-$colorBackgroundBtnNeutral: orange;
+$colorBackgroundBtnPositive: rgb(94, 158, 94);
+$colorBackgroundBtnNegative: rgb(236, 79, 79);
+$colorBackgroundBtnNeutral: rgb(226, 177, 85);
 $colorTextBtn: whitesmoke;
 $colorBtnHoverNegative: #e71414;
 $colorBtnActiveNegative: #ff4343;
@@ -39,6 +39,7 @@ $colorText: white;
   padding: 0 20px;
   font-size: 14px;
   line-height: 19px;
+  background-color:#d8dff0;
   border: none;
   border-radius: 10px;
   transition: all 0.3s linear 0s;
@@ -49,15 +50,18 @@ $colorText: white;
 
 body {
   height: 3000px;
-  background-color: lightblue;
+  background-color: rgb(110, 119, 122);
 }
 
 .container {
-  background-color: blueviolet;
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
-  border-radius: 15px;
+}
+
+.row {
+   background-color: rgb(77, 75, 78);
+   border-radius: 15px;
 }
 
 .wrapper {
@@ -70,14 +74,8 @@ body {
 .delete-all,
 .delete-last {
   background-color: $colorBackgroundBtnNegative;
-  &:hover {
-    background-color: $colorBtnHoverNegative;
-  }
-  &:active {
-    background-color: $colorBtnActiveNegative;
-    box-shadow: 4px 4px 30px 0px $colorBtnActiveNegative;
-  }
 }
+
 .add {
   flex: 0 1 15%;
   background-color: $colorBackgroundBtnPositive;
@@ -89,6 +87,7 @@ body {
     box-shadow: 4px 4px 30px 0px $colorBtnActivePositive;
   }
 }
+
 .add[disabled],
 .delete-last[disabled],
 .delete-all[disabled],
@@ -100,8 +99,8 @@ body {
   cursor: not-allowed;
 }
 .main-items {
-  padding-top: 25px;
-  margin: 50px 0;
+  padding-top: 18px;
+  margin:25px 0 18px 0;
 }
 .input__enter-todo {
   flex: 1 1 auto;
@@ -131,17 +130,11 @@ body {
 .show-completed,
 .hide-completed {
   background-color: $colorBackgroundBtnNeutral;
-  &:hover {
-    background-color: $colorBtnHoverNeutral;
-  }
-  &:active {
-    background-color: $colorBtnActiveNeutral;
-    box-shadow: 4px 4px 30px 0px $colorBtnActiveNeutral;
-  }
 }
 
 .addition-items {
   padding-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .wrapper__all-count,
@@ -160,15 +153,17 @@ body {
 }
 
 .todo-item {
-  flex: 0 1 40%;
-  margin: 25px auto;
-  border: 3px solid black;
+   max-width: 400px;
+   width:100%;
+  margin: 10px auto;
   border-radius: 15px;
   padding: 30px;
+  background-color: #575c69;
+  color:#ffffff;
 }
 
 .checked {
-  background-color: pink;
+  background-color: rgb(99, 177, 103);
   &.task_desc{
    text-decoration: line-through;
   }

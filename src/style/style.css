@@ -10,14 +10,17 @@
 
 body {
   height: 3000px;
-  background-color: lightblue;
+  background-color: #6e777a;
 }
 
 .container {
-  background-color: blueviolet;
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.row {
+  background-color: #4d4b4e;
   border-radius: 15px;
 }
 
@@ -47,26 +50,14 @@ body {
 
 .delete-all,
 .delete-last {
-  background-color: red;
-}
-
-.delete-all:hover,
-.delete-last:hover {
-  background-color: #e71414;
-}
-
-.delete-all:active,
-.delete-last:active {
-  background-color: #ff4343;
-  -webkit-box-shadow: 4px 4px 30px 0px #ff4343;
-          box-shadow: 4px 4px 30px 0px #ff4343;
+  background-color: #ec4f4f;
 }
 
 .add {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 15%;
           flex: 0 1 15%;
-  background-color: green;
+  background-color: #5e9e5e;
 }
 
 .add:hover {
@@ -91,8 +82,8 @@ body {
 }
 
 .main-items {
-  padding-top: 25px;
-  margin: 50px 0;
+  padding-top: 18px;
+  margin: 25px 0 18px 0;
 }
 
 .input__enter-todo {
@@ -103,6 +94,7 @@ body {
   padding: 0 20px;
   font-size: 14px;
   line-height: 19px;
+  background-color: #d8dff0;
   border: none;
   border-radius: 10px;
   -webkit-transition: all 0.3s linear 0s;
@@ -121,6 +113,7 @@ body {
   padding: 0 20px;
   font-size: 14px;
   line-height: 19px;
+  background-color: #d8dff0;
   border: none;
   border-radius: 10px;
   -webkit-transition: all 0.3s linear 0s;
@@ -150,23 +143,12 @@ body {
 
 .show-completed,
 .hide-completed {
-  background-color: orange;
-}
-
-.show-completed:hover,
-.hide-completed:hover {
-  background-color: rgba(238, 184, 84, 0.904);
-}
-
-.show-completed:active,
-.hide-completed:active {
-  background-color: #c2a36b;
-  -webkit-box-shadow: 4px 4px 30px 0px #c2a36b;
-          box-shadow: 4px 4px 30px 0px #c2a36b;
+  background-color: #e2b155;
 }
 
 .addition-items {
   padding-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .wrapper__all-count,
@@ -188,17 +170,17 @@ body {
 }
 
 .todo-item {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 40%;
-          flex: 0 1 40%;
-  margin: 25px auto;
-  border: 3px solid black;
+  max-width: 400px;
+  width: 100%;
+  margin: 10px auto;
   border-radius: 15px;
   padding: 30px;
+  background-color: #575c69;
+  color: #ffffff;
 }
 
 .checked {
-  background-color: pink;
+  background-color: #63b167;
 }
 
 .checked.task_desc {

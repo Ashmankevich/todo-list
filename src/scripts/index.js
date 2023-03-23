@@ -6,6 +6,7 @@ import {
   showCompleted,
   hideCompleted,
   inputSearch,
+  enterItem,
 } from "../scripts/components/HTMLElements";
 import { update } from "./localStorage";
 import { hideItem } from "./components/buttons/hideItem";
@@ -21,7 +22,7 @@ window.addEventListener("load", update);
 add.addEventListener("click", addItem);
 deleteAll.addEventListener("click", showModalWindowDelete);
 deleteLast.addEventListener("click", deleteLastItem);
-document.addEventListener("keydown", pressedEnter);
+enterItem.addEventListener("keydown", pressedEnter);
 listItems.addEventListener("click", deleteItem);
 listItems.addEventListener("change", completeItem);
 hideCompleted.addEventListener("click", hideItem);
