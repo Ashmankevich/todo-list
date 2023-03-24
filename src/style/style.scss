@@ -14,7 +14,7 @@ $colorBackgroundBtnNeutral: rgb(226, 177, 85);
 $colorTextBtn: whitesmoke;
 $colorBtnHoverNegative: #e71414;
 $colorBtnActiveNegative: #ff4343;
-$colorBtnHoverPositive: rgb(53, 175, 53);
+$colorBtnHoverPositive: rgb(77, 168, 77);
 $colorBtnActivePositive: rgb(54, 153, 54);
 $colorBtnHoverNeutral: rgba(238, 184, 84, 0.904);
 $colorBtnActiveNeutral: rgb(194, 163, 107);
@@ -68,9 +68,11 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
 .btn {
   @include Btn();
 }
+
 .delete-all,
 .delete-last {
   background-color: $colorBackgroundBtnNegative;
@@ -98,10 +100,12 @@ body {
   background: #6c7589;
   cursor: not-allowed;
 }
+
 .main-items {
   padding-top: 18px;
   margin:25px 0 18px 0;
 }
+
 .input__enter-todo {
   flex: 1 1 auto;
   @include Input();
@@ -153,7 +157,7 @@ body {
 }
 
 .todo-item {
-   max-width: 400px;
+   max-width: 500px;
    width:100%;
   margin: 10px auto;
   border-radius: 15px;
@@ -175,9 +179,9 @@ body {
 }
 
 .todo-date {
-  color: $colorText;
   font-size: 14px;
   padding-top: 20px;
+  color:#758199
 }
 
 .todo-close {
@@ -203,11 +207,17 @@ body {
   width: 2px;
   background-color: #ec7979;
 }
+
 .btn-close:before {
   transform: rotate(45deg);
 }
+
 .btn-close:after {
   transform: rotate(-45deg);
+}
+
+.task_desc {
+word-break:break-word;
 }
 
 #confirm-wrap {
@@ -282,6 +292,11 @@ body {
   margin-left: 10px;
 }
 
+.custom-checkbox {
+   max-width: 300px;
+   margin-right: 15px;
+}
+
 .custom-checkbox > input {
   position: absolute;
   z-index: -1;
@@ -297,13 +312,13 @@ body {
 .custom-checkbox > span::before {
   content: "";
   display: inline-block;
-  width: 1em;
-  height: 1em;
+  width: 1.25em;
+  height: 1.25em;
   flex-shrink: 0;
   flex-grow: 0;
   border: 1px solid #adb5bd;
   border-radius: 0.25em;
-  margin-right: 0.5em;
+  margin-right: 1.5em;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 50% 50%;
