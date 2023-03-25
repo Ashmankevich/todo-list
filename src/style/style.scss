@@ -95,7 +95,7 @@ body {
 .delete-all[disabled],
 .hide-completed[disabled],
 .show-completed[disabled],
-.input__search-todo[disabled] {
+.input-search-todo[disabled] {
   color: #d2d5db;
   background: #6c7589;
   cursor: not-allowed;
@@ -106,12 +106,12 @@ body {
   margin:25px 0 18px 0;
 }
 
-.input__enter-todo {
+.input-enter-todo {
   flex: 1 1 auto;
   @include Input();
 }
 
-.input__search-todo {
+.input-search-todo {
   flex: 0 1 30%;
   @include Input();
 }
@@ -121,8 +121,8 @@ body {
 .add,
 .show-all,
 .show-completed,
-.wrapper__all-count,
-.wrapper__completed {
+.all-count,
+.completed {
   margin: 0 15px;
 }
 
@@ -141,8 +141,8 @@ body {
   margin-bottom: 25px;
 }
 
-.wrapper__all-count,
-.wrapper__completed {
+.all-count,
+.completed {
   display: flex;
   align-self: center;
 }
@@ -216,7 +216,7 @@ body {
   transform: rotate(-45deg);
 }
 
-.task_desc {
+.task-desc {
 word-break:break-word;
 }
 
@@ -264,8 +264,8 @@ word-break:break-word;
   opacity: 0.9;
 }
 
-.button__ok,
-.button__cancel {
+.button-ok,
+.button-cancel {
   border: none;
   max-width: 100px;
   width: 100%;
@@ -284,11 +284,11 @@ word-break:break-word;
  }
 }
 
-.button__ok {
+.button-ok {
   margin-right: 10px;
 }
 
-.button__cancel {
+.button-cancel {
   margin-left: 10px;
 }
 

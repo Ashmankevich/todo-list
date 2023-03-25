@@ -20,8 +20,8 @@ function complete() {
 function showModal(text) {
   showCover();
   let message = document.getElementById("confirm-message");
-  let buttonOk = document.querySelector(".button__ok");
-  let buttonCancel = document.querySelector(".button__cancel");
+  let buttonOk = document.querySelector(".button-ok");
+  let buttonCancel = document.querySelector(".button-cancel");
 
   message.innerHTML = text;
 

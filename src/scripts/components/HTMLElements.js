@@ -22,7 +22,7 @@ deleteLast.textContent = "Delete Last";
 mainItems.append(deleteLast);
 
 export const enterItem = document.createElement("input");
-enterItem.className = "input__enter-todo";
+enterItem.className = "input-enter-todo";
 enterItem.setAttribute("placeholder", "Enter todo...");
 mainItems.append(enterItem);
 
@@ -36,7 +36,7 @@ additionalItems.className = "wrapper addition-items";
 row.append(additionalItems);
 
 export const divAllCount = document.createElement("div");
-divAllCount.className = "wrapper__all-count";
+divAllCount.className = "all-count";
 additionalItems.append(divAllCount);
 
 export const allCountName = document.createElement("p");
@@ -50,7 +50,7 @@ allCount.textContent = "0";
 divAllCount.append(allCount);
 
 export const completed = document.createElement("div");
-completed.className = "wrapper__completed";
+completed.className = "completed";
 additionalItems.append(completed);
 
 export const allCompletedName = document.createElement("p");
@@ -74,7 +74,7 @@ showCompleted.textContent = "Show Completed";
 additionalItems.append(showCompleted);
 
 export const inputSearch = document.createElement("input");
-inputSearch.className = "input__search-todo";
+inputSearch.className = "input-search-todo";
 inputSearch.setAttribute("placeholder", "Search...");
 additionalItems.append(inputSearch);
 
@@ -96,14 +96,14 @@ modalWindowWrap.append(modalWindowMessage);
 
 export let modalWindowOK = document.createElement("button");
 modalWindowOK.type = "button";
-modalWindowOK.className = "button__ok";
+modalWindowOK.className = "button-ok";
 modalWindowOK.name = "ok";
 modalWindowOK.textContent = "Ok";
 modalWindowWrap.append(modalWindowOK);
 
 export let modalWindowCancel = document.createElement("button");
 modalWindowCancel.type = "button";
-modalWindowCancel.className = "button__cancel";
+modalWindowCancel.className = "button-cancel";
 modalWindowCancel.name = "cancel";
 modalWindowCancel.textContent = "Cancel";
 modalWindowWrap.append(modalWindowCancel);

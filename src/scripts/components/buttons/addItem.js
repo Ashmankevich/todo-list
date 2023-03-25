@@ -54,7 +54,7 @@ function createTemplate(obj) {
   labelInputItem.append(inputItem);
 
   let description = document.createElement("span");
-  description.className = "task_desc";
+  description.className = "task-desc";
   description.textContent = obj.description;
   labelInputItem.append(description);
 

@@ -5,7 +5,7 @@ import { complete } from "./modalWindow";
 function showModalWindowDelete() {
   showModal("You are going to delete all tasks. Are you sure?");
 
-  let btnOK = document.querySelector(".button__ok");
+  let btnOK = document.querySelector(".button-ok");
 
   btnOK.addEventListener("click", () => {
     deleteAllItems();
