@@ -49,7 +49,6 @@ $colorText: white;
 }
 
 body {
-  height: 3000px;
   background-color: rgb(110, 119, 122);
 }
 
@@ -166,12 +165,13 @@ body {
   color:#ffffff;
 }
 
-.checked {
+.item-complete {
   background-color: rgb(99, 177, 103);
-  &.task_desc{
+}
+
+.text-complete{
    text-decoration: line-through;
-  }
-  
+   text-decoration-thickness: 2px;
 }
 
 .list-todo {
@@ -181,7 +181,7 @@ body {
 .todo-date {
   font-size: 14px;
   padding-top: 20px;
-  color:#758199
+  color:#758199;
 }
 
 .todo-close {
@@ -293,7 +293,7 @@ word-break:break-word;
 }
 
 .custom-checkbox {
-   max-width: 300px;
+   max-width: 285px;
    margin-right: 15px;
 }
 

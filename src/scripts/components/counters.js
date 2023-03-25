@@ -11,7 +11,7 @@ import { allTasks } from "../localStorage";
 
 function completedCount() {
   let completedCount = [];
-  for (let completed of document.querySelectorAll(".checked")) {
+  for (let completed of document.querySelectorAll(".item-complete")) {
     completedCount.push(completed);
   }
   allCompleted.textContent = completedCount.length;

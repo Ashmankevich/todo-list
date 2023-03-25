@@ -5,11 +5,14 @@ function completeItem(event) {
   if (event.target.className != "todo-input") return;
   let parent = event.target.closest(".todo-item");
   let id = Number(parent.getAttribute("id"));
+  let text = parent.querySelector(".task-desc");
 
   if (event.target.checked) {
-    parent.classList.add("checked");
+    parent.classList.add("item-complete");
+    text.classList.add("text-complete");
   } else {
-    parent.classList.remove("checked");
+    parent.classList.remove("item-complete");
+    text.classList.remove("text-complete");
   }
 
   allTasks.forEach((item) => {

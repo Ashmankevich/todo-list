@@ -48,7 +48,7 @@ function createTemplate(obj) {
   const labelInputItem = document.createElement("label");
   labelInputItem.className = "custom-checkbox";
 
-  obj.isChecked ? wrapItem.classList.toggle("checked") : null;
+  obj.isChecked ? wrapItem.classList.toggle("item-complete") : null;
 
   wrapItem.append(labelInputItem);
   labelInputItem.append(inputItem);
@@ -57,6 +57,8 @@ function createTemplate(obj) {
   description.className = "task-desc";
   description.textContent = obj.description;
   labelInputItem.append(description);
+
+  obj.isChecked ? description.classList.toggle("text-complete") : null;
 
   const wrapperCloseAndDate = document.createElement("div");
   wrapperCloseAndDate.className = "wrapper todo-close";
