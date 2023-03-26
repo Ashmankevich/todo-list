@@ -31,7 +31,9 @@ function pressedEnter(keyPressed) {
 
 function renderTemplate() {
   listItems.innerHTML = "";
-  allTasks.forEach((item) => createTemplate(item));
+  const active = allTasks.filter((item) => item.isChecked === false);
+  const completed = allTasks.filter((item) => item.isChecked === true);
+  [...active, ...completed].forEach((item) => createTemplate(item));
 }
 
 function createTemplate(obj) {

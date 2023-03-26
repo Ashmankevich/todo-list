@@ -1,5 +1,6 @@
 import { completedCount } from "./counters";
 import { allTasks, updateLocalStorage } from "../localStorage";
+import { renderTemplate } from "./buttons/addItem";
 
 function completeItem(event) {
   if (event.target.className != "todo-input") return;
@@ -19,6 +20,7 @@ function completeItem(event) {
     id === item.id ? (item.isChecked = !item.isChecked) : null;
   });
   completedCount();
+  renderTemplate();
   updateLocalStorage();
 }
 
