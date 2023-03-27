@@ -51,7 +51,7 @@
 64E:\IT\code_for_web\app_todo_ver.3\node_modules\lmdb\dependencies133215566028395017 1
 65E:\IT\code_for_web\app_todo_ver.3\node_modules\uncss\src\jsdom.js133215564674594079 0
 75E:\IT\code_for_web\app_todo_ver.3\node_modules\babel-runtime\helpers\jsx.js133215564823142202 0
-57E:\IT\code_for_web\app_todo_ver.3\dist\index.ee7f3cbd.css133243228835637435 0
+57E:\IT\code_for_web\app_todo_ver.3\dist\index.ee7f3cbd.css133244172486982029 0
 85E:\IT\code_for_web\app_todo_ver.3\node_modules\parcel-bundler\lib\visitors\process.js133215564891316139 0
 86E:\IT\code_for_web\app_todo_ver.3\node_modules\caniuse-lite\data\features\svg-fonts.js133215565000838089 0
 107E:\IT\code_for_web\app_todo_ver.3\node_modules\@parcel\optimizer-htmlnano\node_modules\posthtml-render\dist133215565855458501 1
@@ -77,7 +77,7 @@
 84E:\IT\code_for_web\app_todo_ver.3\node_modules\serialize-to-js\lib\internal\utils.js133215564741311790 0
 78E:\IT\code_for_web\app_todo_ver.3\node_modules\node-libs-browser\mock\empty.js133215564746510243 0
 96E:\IT\code_for_web\app_todo_ver.3\node_modules\@parcel\optimizer-htmlnano\node_modules\.bin\svgo133215566311679089 0
-38E:\IT\code_for_web\app_todo_ver.3\dist133243228837568712 1
+38E:\IT\code_for_web\app_todo_ver.3\dist133244172491525046 1
 44E:\IT\code_for_web\app_todo_ver.3\.gitignore133214716125149087 0
 110E:\IT\code_for_web\app_todo_ver.3\node_modules\@parcel\optimizer-htmlnano\node_modules\brace-expansion\.github133215565845837122 1
 124E:\IT\code_for_web\app_todo_ver.3\node_modules\@parcel\optimizer-htmlnano\node_modules\postcss-value-parser\lib\stringify.js133215565842444876 0
@@ -185,7 +185,7 @@
 43E:\IT\code_for_web\app_todo_ver.3\src\style133214724067110333 1
 70E:\IT\code_for_web\app_todo_ver.3\node_modules\xmlchars\xml\1.1\ed2.js133215564673893621 0
 71E:\IT\code_for_web\app_todo_ver.3\node_modules\union-value\package.json133215564649583265 0
-53E:\IT\code_for_web\app_todo_ver.3\src\style\style.css133242474247675634 0
+53E:\IT\code_for_web\app_todo_ver.3\src\style\style.css133244172440346407 0
 86E:\IT\code_for_web\app_todo_ver.3\node_modules\es-abstract\2021\OrdinaryToPrimitive.js133215565014282920 0
 61E:\IT\code_for_web\app_todo_ver.3\node_modules\delayed-stream133215564725401243 1
 115E:\IT\code_for_web\app_todo_ver.3\node_modules\@parcel\packager-svg\node_modules\@parcel\utils\test\input\sourcemap133215566085653308 1
@@ -203,13 +203,13 @@
 115E:\IT\code_for_web\app_todo_ver.3\node_modules\uncss\node_modules\postcss-selector-parser\dist\__tests__\escapes.js133215564782653079 0
 74E:\IT\code_for_web\app_todo_ver.3\node_modules\xmlchars\xml\1.1\ed2.js.map133215564763740542 0
 113E:\IT\code_for_web\app_todo_ver.3\node_modules\@parcel\transformer-html\node_modules\htmlparser2\lib\Tokenizer.js133215565852561580 0
-57E:\IT\code_for_web\app_todo_ver.3\src\style\style.css.map133242474247785704 0
+57E:\IT\code_for_web\app_todo_ver.3\src\style\style.css.map133244172440856748 0
 115E:\IT\code_for_web\app_todo_ver.3\node_modules\@parcel\runtime-react-refresh\node_modules\chalk\source\templates.js133215565835210078 0
 68E:\IT\code_for_web\app_todo_ver.3\node_modules\htmlparser2\README.md133215564683095656 0
 81E:\IT\code_for_web\app_todo_ver.3\node_modules\@babel\traverse\lib\path\family.js133215564813510549 0
 105E:\IT\code_for_web\app_todo_ver.3\node_modules\@parcel\optimizer-image\node_modules\chalk\source\index.js133215565829056022 0
 72E:\IT\code_for_web\app_todo_ver.3\node_modules\postcss-normalize-unicode133215564709115452 1
-54E:\IT\code_for_web\app_todo_ver.3\src\style\style.scss133242474243414185 0
+54E:\IT\code_for_web\app_todo_ver.3\src\style\style.scss133244172431176059 0
 67E:\IT\code_for_web\app_todo_ver.3\node_modules\safe-regex-test\test133215564703336620 1
 96E:\IT\code_for_web\app_todo_ver.3\node_modules\csso\node_modules\css-tree\lib\tokenizer\const.js133215564804577615 0
 120E:\IT\code_for_web\app_todo_ver.3\node_modules\@parcel\transformer-react-refresh-wrap\node_modules\@parcel\utils\LICENSE133215565907754939 0
@@ -378,7 +378,7 @@
 86E:\IT\code_for_web\app_todo_ver.3\node_modules\parcel\node_modules\is-number\README.md133215565840268421 0
 109E:\IT\code_for_web\app_todo_ver.3\node_modules\@parcel\optimizer-htmlnano\node_modules\domhandler\lib\node.js133215565836525951 0
 89E:\IT\code_for_web\app_todo_ver.3\node_modules\htmlnano\lib\modules\collapseWhitespace.js133215564734867524 0
-75E:\IT\code_for_web\app_todo_ver.3\src\scripts\components\buttons\addItem.js133243228825748737 0
+75E:\IT\code_for_web\app_todo_ver.3\src\scripts\components\buttons\addItem.js133244158352695355 0
 99E:\IT\code_for_web\app_todo_ver.3\node_modules\uncss\node_modules\postcss-selector-parser\README.md133215564741606993 0
 110E:\IT\code_for_web\app_todo_ver.3\node_modules\css-modules-loader-core\node_modules\postcss\lib\declaration.js133215564823257280 0
 89E:\IT\code_for_web\app_todo_ver.3\node_modules\sprintf-js\dist\angular-sprintf.min.js.map133215564751392211 0
@@ -19935,7 +19935,7 @@
 147E:\IT\code_for_web\app_todo_ver.3\node_modules\@parcel\transformer-image\node_modules\@parcel\workers\test\integration\workerfarm\reverse-handle.js133215565948927354 0
 98E:\IT\code_for_web\app_todo_ver.3\node_modules\babel-plugin-polyfill-regenerator\esm\index.mjs.map133215564721588719 0
 91E:\IT\code_for_web\app_todo_ver.3\node_modules\babel-plugin-polyfill-corejs3\core-js-compat133215564740941548 1
-49E:\IT\code_for_web\app_todo_ver.3\dist\index.html133243024436752330 0
+49E:\IT\code_for_web\app_todo_ver.3\dist\index.html133244172486181498 0
 86E:\IT\code_for_web\app_todo_ver.3\node_modules\babel-plugin-polyfill-corejs3\README.md133215564684332486 0
 99E:\IT\code_for_web\app_todo_ver.3\node_modules\@babel\runtime\helpers\taggedTemplateLiteralLoose.js133215564910208668 0
 89E:\IT\code_for_web\app_todo_ver.3\node_modules\babel-plugin-polyfill-corejs3\lib\utils.js133215564793065050 0
@@ -20991,7 +20991,7 @@
 123E:\IT\code_for_web\app_todo_ver.3\node_modules\@parcel\optimizer-htmlnano\node_modules\cosmiconfig\dist\ExplorerSync.js.map133215566013911743 0
 151E:\IT\code_for_web\app_todo_ver.3\node_modules\@parcel\transformer-posthtml\node_modules\dom-serializer\node_modules\entities\lib\decode_codepoint.d.ts133215565892763435 0
 149E:\IT\code_for_web\app_todo_ver.3\node_modules\@parcel\transformer-posthtml\node_modules\dom-serializer\node_modules\entities\lib\decode_codepoint.js133215565828880905 0
-61E:\IT\code_for_web\app_todo_ver.3\dist\index.ee7f3cbd.css.map133243228836457979 0
+61E:\IT\code_for_web\app_todo_ver.3\dist\index.ee7f3cbd.css.map133244172491214843 0
 141E:\IT\code_for_web\app_todo_ver.3\node_modules\@parcel\transformer-posthtml\node_modules\dom-serializer\node_modules\entities\lib\encode.d.ts133215565898139183 0
 56E:\IT\code_for_web\app_todo_ver.3\node_modules\.bin\svgo133215565053790092 0
 145E:\IT\code_for_web\app_todo_ver.3\node_modules\@parcel\transformer-posthtml\node_modules\dom-serializer\node_modules\entities\lib\encode.d.ts.map133215565883062003 0
@@ -21363,7 +21363,7 @@
 118E:\IT\code_for_web\app_todo_ver.3\node_modules\@parcel\transformer-js\node_modules\@parcel\utils\src\getModuleParts.js133215565938727259 0
 112E:\IT\code_for_web\app_todo_ver.3\node_modules\@parcel\reporter-cli\node_modules\@parcel\utils\src\bundle-url.js133215566028314964 0
 114E:\IT\code_for_web\app_todo_ver.3\node_modules\@parcel\transformer-js\node_modules\@parcel\utils\src\getRootDir.js133215565939587841 0
-56E:\IT\code_for_web\app_todo_ver.3\dist\index.0fbc91cd.js133243228835837562 0
+56E:\IT\code_for_web\app_todo_ver.3\dist\index.0fbc91cd.js133244172487382310 0
 108E:\IT\code_for_web\app_todo_ver.3\node_modules\@parcel\transformer-js\node_modules\@parcel\utils\src\glob.js133215565940113182 0
 108E:\IT\code_for_web\app_todo_ver.3\node_modules\@parcel\transformer-js\node_modules\@parcel\utils\src\hash.js133215565940543470 0
 115E:\IT\code_for_web\app_todo_ver.3\node_modules\@parcel\transformer-js\node_modules\@parcel\utils\src\http-server.js133215565941053811 0
@@ -26576,5 +26576,5 @@
 56E:\IT\code_for_web\app_todo_ver.3\node_modules\.bin\uuid133215565054680685 0
 60E:\IT\code_for_web\app_todo_ver.3\node_modules\.bin\uuid.ps1133215565054535590 0
 61E:\IT\code_for_web\app_todo_ver.3\node_modules\.bin\which.ps1133215565053905175 0
-60E:\IT\code_for_web\app_todo_ver.3\dist\index.0fbc91cd.js.map133243228837018350 0
+60E:\IT\code_for_web\app_todo_ver.3\dist\index.0fbc91cd.js.map133244172491364950 0
 56E:\IT\code_for_web\app_todo_ver.3\dist\index.a0bd9b41.js133215590126574953 0

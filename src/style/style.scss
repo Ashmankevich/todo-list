@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Raleway&display=swap");
 
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -39,12 +44,20 @@ $colorText: white;
   padding: 0 20px;
   font-size: 14px;
   line-height: 19px;
-  background-color:#d8dff0;
+  background-color: #d8dff0;
   border: none;
   border-radius: 10px;
   transition: all 0.3s linear 0s;
   &:focus {
+    color: #212529;
+    background-color: #e9e9e9;
+    border-color: #bdbdbd;
     outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(155, 149, 149, 0.25);
+  }
+  &::placeholder {
+    color: #212529;
+    opacity: 0.5;
   }
 }
 
@@ -59,8 +72,8 @@ body {
 }
 
 .row {
-   background-color: rgb(77, 75, 78);
-   border-radius: 15px;
+  background-color: rgb(77, 75, 78);
+  border-radius: 15px;
 }
 
 .wrapper {
@@ -102,7 +115,7 @@ body {
 
 .main-items {
   padding-top: 18px;
-  margin:25px 0 18px 0;
+  margin: 25px 0 18px 0;
 }
 
 .input-enter-todo {
@@ -156,22 +169,22 @@ body {
 }
 
 .todo-item {
-   max-width: 500px;
-   width:100%;
+  max-width: 500px;
+  width: 100%;
   margin: 10px auto;
   border-radius: 15px;
   padding: 30px;
   background-color: #575c69;
-  color:#ffffff;
+  color: #ffffff;
 }
 
 .item-complete {
   background-color: rgb(99, 177, 103);
 }
 
-.text-complete{
-   text-decoration: line-through;
-   text-decoration-thickness: 2px;
+.text-complete {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
 }
 
 .list-todo {
@@ -181,7 +194,7 @@ body {
 .todo-date {
   font-size: 14px;
   padding-top: 20px;
-  color:#758199;
+  color: #758199;
 }
 
 .todo-close {
@@ -217,7 +230,7 @@ body {
 }
 
 .task-desc {
-word-break:break-word;
+  word-break: break-word;
 }
 
 #confirm-wrap {
@@ -279,9 +292,9 @@ word-break:break-word;
     background-color: #7683a5;
   }
   &:active {
-   box-shadow: 0px 0px 10px 0px #4c64a0 inset;
-   background-color: #4c64a0;
- }
+    box-shadow: 0px 0px 10px 0px #4c64a0 inset;
+    background-color: #4c64a0;
+  }
 }
 
 .button-ok {
@@ -293,8 +306,8 @@ word-break:break-word;
 }
 
 .custom-checkbox {
-   max-width: 285px;
-   margin-right: 15px;
+  max-width: 285px;
+  margin-right: 15px;
 }
 
 .custom-checkbox > input {

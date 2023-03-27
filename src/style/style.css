@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Raleway&display=swap");
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -101,7 +107,32 @@ body {
 }
 
 .input-enter-todo:focus {
+  color: #212529;
+  background-color: #e9e9e9;
+  border-color: #bdbdbd;
   outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(155, 149, 149, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(155, 149, 149, 0.25);
+}
+
+.input-enter-todo::-webkit-input-placeholder {
+  color: #212529;
+  opacity: 0.5;
+}
+
+.input-enter-todo:-ms-input-placeholder {
+  color: #212529;
+  opacity: 0.5;
+}
+
+.input-enter-todo::-ms-input-placeholder {
+  color: #212529;
+  opacity: 0.5;
+}
+
+.input-enter-todo::placeholder {
+  color: #212529;
+  opacity: 0.5;
 }
 
 .input-search-todo {
@@ -120,7 +151,32 @@ body {
 }
 
 .input-search-todo:focus {
+  color: #212529;
+  background-color: #e9e9e9;
+  border-color: #bdbdbd;
   outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(155, 149, 149, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(155, 149, 149, 0.25);
+}
+
+.input-search-todo::-webkit-input-placeholder {
+  color: #212529;
+  opacity: 0.5;
+}
+
+.input-search-todo:-ms-input-placeholder {
+  color: #212529;
+  opacity: 0.5;
+}
+
+.input-search-todo::-ms-input-placeholder {
+  color: #212529;
+  opacity: 0.5;
+}
+
+.input-search-todo::placeholder {
+  color: #212529;
+  opacity: 0.5;
 }
 
 .delete-all,
