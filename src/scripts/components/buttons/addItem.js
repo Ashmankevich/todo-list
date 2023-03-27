@@ -9,6 +9,7 @@ class getTask {
     this.description = enterItem.value;
     this.isChecked = false;
     this.id = Date.now();
+    this.date = getDate();
   }
 }
 
@@ -76,7 +77,7 @@ function createTemplate(obj) {
   const dateTodo = document.createElement("div");
   dateTodo.className = "todo-date";
   wrapperCloseAndDate.append(dateTodo);
-  dateTodo.append(getDate());
+  dateTodo.append(obj.date);
 }
 
 export { addItem, pressedEnter, renderTemplate };
