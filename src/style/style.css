@@ -19,7 +19,7 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 800px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -86,60 +86,33 @@ body {
   cursor: not-allowed;
 }
 
+.input-search-todo[disabled]::-webkit-input-placeholder {
+  color: whitesmoke;
+}
+
+.input-search-todo[disabled]:-ms-input-placeholder {
+  color: whitesmoke;
+}
+
+.input-search-todo[disabled]::-ms-input-placeholder {
+  color: whitesmoke;
+}
+
+.input-search-todo[disabled]::placeholder {
+  color: whitesmoke;
+}
+
 .main-items {
   padding-top: 18px;
-  margin: 25px 0 18px 0;
+  margin: 60px 0 18px 0;
 }
 
-.input-enter-todo {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  margin: 0 20px;
-  padding: 0 20px;
-  font-size: 14px;
-  line-height: 19px;
-  background-color: #d8dff0;
-  border: none;
-  border-radius: 10px;
-  -webkit-transition: all 0.3s linear 0s;
-  transition: all 0.3s linear 0s;
-}
-
-.input-enter-todo:focus {
-  color: #212529;
-  background-color: #e9e9e9;
-  border-color: #bdbdbd;
-  outline: 0;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(155, 149, 149, 0.25);
-          box-shadow: 0 0 0 0.2rem rgba(155, 149, 149, 0.25);
-}
-
-.input-enter-todo::-webkit-input-placeholder {
-  color: #212529;
-  opacity: 0.5;
-}
-
-.input-enter-todo:-ms-input-placeholder {
-  color: #212529;
-  opacity: 0.5;
-}
-
-.input-enter-todo::-ms-input-placeholder {
-  color: #212529;
-  opacity: 0.5;
-}
-
-.input-enter-todo::placeholder {
-  color: #212529;
-  opacity: 0.5;
-}
-
+.input-enter-todo,
 .input-search-todo {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 30%;
-          flex: 0 1 30%;
-  margin: 0 20px;
+      -ms-flex: 0 1 40%;
+          flex: 0 1 40%;
+  margin: 0 15px;
   padding: 0 20px;
   font-size: 14px;
   line-height: 19px;
@@ -150,6 +123,7 @@ body {
   transition: all 0.3s linear 0s;
 }
 
+.input-enter-todo:focus,
 .input-search-todo:focus {
   color: #212529;
   background-color: #e9e9e9;
@@ -159,21 +133,25 @@ body {
           box-shadow: 0 0 0 0.2rem rgba(155, 149, 149, 0.25);
 }
 
+.input-enter-todo::-webkit-input-placeholder,
 .input-search-todo::-webkit-input-placeholder {
   color: #212529;
   opacity: 0.5;
 }
 
+.input-enter-todo:-ms-input-placeholder,
 .input-search-todo:-ms-input-placeholder {
   color: #212529;
   opacity: 0.5;
 }
 
+.input-enter-todo::-ms-input-placeholder,
 .input-search-todo::-ms-input-placeholder {
   color: #212529;
   opacity: 0.5;
 }
 
+.input-enter-todo::placeholder,
 .input-search-todo::placeholder {
   color: #212529;
   opacity: 0.5;
@@ -184,20 +162,19 @@ body {
 .add,
 .show-all,
 .show-completed,
-.all-count,
-.completed {
+.all-count {
   margin: 0 15px;
+}
+
+.completed {
+  margin-right: 30px;
 }
 
 .hide-completed,
 .show-completed {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 15%;
-          flex: 0 1 15%;
-}
-
-.show-completed,
-.hide-completed {
+      -ms-flex: 0 1 13%;
+          flex: 0 1 13%;
   background-color: #e2b155;
 }
 
@@ -215,13 +192,27 @@ body {
       align-self: center;
 }
 
+.all-count {
+  max-width: 50px;
+  width: 100%;
+}
+
+.completed {
+  max-width: 120px;
+  width: 100%;
+}
+
 .text-count-name,
 .text-all-count,
 .text-completed-name,
 .text-all-completed {
-  color: white;
-  font-size: 20px;
-  margin: 0;
+  color: whitesmoke;
+  font-size: 18px;
+}
+
+.text-all-count,
+.text-all-completed {
+  margin-left: 10px;
 }
 
 .todo-item {

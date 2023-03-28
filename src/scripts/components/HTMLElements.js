@@ -41,7 +41,7 @@ additionalItems.append(divAllCount);
 
 export const allCountName = document.createElement("p");
 allCountName.className = "text-count-name";
-allCountName.textContent = "All:";
+allCountName.textContent = "All";
 divAllCount.append(allCountName);
 
 export const allCount = document.createElement("p");
@@ -55,7 +55,7 @@ additionalItems.append(completed);
 
 export const allCompletedName = document.createElement("p");
 allCompletedName.className = "text-completed-name";
-allCompletedName.textContent = "Completed:";
+allCompletedName.textContent = "Completed";
 completed.append(allCompletedName);
 
 export const allCompleted = document.createElement("p");
@@ -65,12 +65,12 @@ completed.append(allCompleted);
 
 export const hideCompleted = document.createElement("button");
 hideCompleted.className = "btn hide-completed";
-hideCompleted.textContent = "Hide completed";
+hideCompleted.textContent = "Hide";
 additionalItems.append(hideCompleted);
 
 export const showCompleted = document.createElement("button");
 showCompleted.className = "btn show-completed";
-showCompleted.textContent = "Show Completed";
+showCompleted.textContent = "Show";
 additionalItems.append(showCompleted);
 
 export const inputSearch = document.createElement("input");
