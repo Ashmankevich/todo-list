@@ -114,8 +114,8 @@ body {
 }
 
 .input-search-todo[disabled]::placeholder {
-   color: $colorTextBtn;
- }
+  color: $colorTextBtn;
+}
 
 .main-items {
   padding-top: 18px;
@@ -133,12 +133,12 @@ body {
 .add,
 .show-all,
 .show-completed,
-.all-count{
+.all-count {
   margin: 0 15px;
 }
 
-.completed{
-   margin-right: 30px;
+.completed {
+  margin-right: 30px;
 }
 
 .hide-completed,
@@ -159,13 +159,13 @@ body {
 }
 
 .all-count {
-   max-width: 50px;
-   width: 100%;
+  max-width: 50px;
+  width: 100%;
 }
 
 .completed {
-   max-width: 120px;
-   width: 100%;
+  max-width: 120px;
+  width: 100%;
 }
 
 .text-count-name,
@@ -178,10 +178,24 @@ body {
 
 .text-all-count,
 .text-all-completed {
-   margin-left: 10px;
+  margin-left: 10px;
+}
+
+@keyframes go-left {
+  from {
+    right: 0px;
+  }
+  to {
+    right: calc(100% - 50px);
+  }
+}
+
+.animation {
+  animation: go-left 1s 1;
 }
 
 .todo-item {
+  position: relative;
   max-width: 500px;
   width: 100%;
   margin: 10px auto;

@@ -215,7 +215,31 @@ body {
   margin-left: 10px;
 }
 
+@-webkit-keyframes go-left {
+  from {
+    right: 0px;
+  }
+  to {
+    right: calc(100% - 50px);
+  }
+}
+
+@keyframes go-left {
+  from {
+    right: 0px;
+  }
+  to {
+    right: calc(100% - 50px);
+  }
+}
+
+.animation {
+  -webkit-animation: go-left 1s 1;
+          animation: go-left 1s 1;
+}
+
 .todo-item {
+  position: relative;
   max-width: 500px;
   width: 100%;
   margin: 10px auto;

@@ -5,15 +5,19 @@ function deleteItem(event) {
   if (event.target.className != "btn-close") return;
   let parent = event.target.closest(".todo-item");
   let id = Number(parent.getAttribute("id"));
-  parent.remove();
 
-  allTasks.forEach((item, index) => {
-    id === item.id ? allTasks.splice(index, 1) : null;
-  });
+  parent ? parent.classList.add("animation") : null;
 
-  updateLocalStorage();
-  getCount();
-  completedCount();
+  setTimeout(() => {
+    parent.remove();
+    allTasks.forEach((item, index) => {
+      id === item.id ? allTasks.splice(index, 1) : null;
+    });
+
+    updateLocalStorage();
+    getCount();
+    completedCount();
+  }, 500);
 }
 
 export { deleteItem };
