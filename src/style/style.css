@@ -38,6 +38,14 @@ body {
           justify-content: space-between;
 }
 
+@media (max-width: 425px) {
+  .wrapper {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+}
+
 .btn {
   font-size: 18px;
   line-height: 22px;
@@ -157,6 +165,20 @@ body {
   opacity: 0.5;
 }
 
+@media (max-width: 425px) {
+  .input-enter-todo,
+  .input-search-todo {
+    max-width: 190px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .input-search-todo {
+    margin: 0 10px;
+  }
+}
+
 .delete-all,
 .delete-last,
 .add,
@@ -164,6 +186,24 @@ body {
 .show-completed,
 .all-count {
   margin: 0 15px;
+}
+
+@media (max-width: 792px) {
+  .delete-all,
+  .delete-last,
+  .add,
+  .show-all,
+  .show-completed,
+  .all-count {
+    font-size: 16px;
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 425px) {
+  .btn.delete-last {
+    display: none;
+  }
 }
 
 .completed {
@@ -178,6 +218,22 @@ body {
   background-color: #e2b155;
 }
 
+@media (max-width: 425px) {
+  .show-completed {
+    margin: 0;
+  }
+}
+
+.hide-completed {
+  margin-right: 15px;
+}
+
+@media (max-width: 425px) {
+  .hide-completed {
+    margin: 0 10px;
+  }
+}
+
 .addition-items {
   padding-bottom: 25px;
   margin-bottom: 25px;
@@ -190,6 +246,13 @@ body {
   display: flex;
   -ms-flex-item-align: center;
       align-self: center;
+}
+
+@media (max-width: 425px) {
+  .all-count,
+  .completed {
+    display: none;
+  }
 }
 
 .all-count {

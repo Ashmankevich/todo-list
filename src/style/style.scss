@@ -79,6 +79,9 @@ body {
 .wrapper {
   display: flex;
   justify-content: space-between;
+  @media (max-width: 425px) {
+    justify-content: left;
+  }
 }
 
 .btn {
@@ -126,6 +129,16 @@ body {
 .input-search-todo {
   flex: 0 1 40%;
   @include Input();
+  @media (max-width: 425px) {
+    max-width: 190px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .input-search-todo {
+    margin: 0 10px;
+  }
 }
 
 .delete-all,
@@ -135,6 +148,16 @@ body {
 .show-completed,
 .all-count {
   margin: 0 15px;
+  @media (max-width: 792px) {
+    font-size: 16px;
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 425px) {
+  .btn.delete-last {
+    display: none;
+  }
 }
 
 .completed {
@@ -147,6 +170,19 @@ body {
   background-color: $colorBackgroundBtnNeutral;
 }
 
+@media (max-width: 425px) {
+  .show-completed {
+    margin: 0;
+  }
+}
+
+.hide-completed {
+  margin-right: 15px;
+  @media (max-width: 425px) {
+    margin: 0 10px;
+  }
+}
+
 .addition-items {
   padding-bottom: 25px;
   margin-bottom: 25px;
@@ -156,6 +192,9 @@ body {
 .completed {
   display: flex;
   align-self: center;
+  @media (max-width: 425px) {
+    display: none;
+  }
 }
 
 .all-count {
