@@ -418,10 +418,23 @@ body {
   vertical-align: middle;
 }
 
+@media (max-width: 460px) {
+  #confirm-wrap {
+    padding: 30px;
+    width: 300px;
+  }
+}
+
 #confirm-message {
   font-size: 25px;
   color: white;
   margin-bottom: 40px;
+}
+
+@media (max-width: 460px) {
+  #confirm-message {
+    font-size: 20px;
+  }
 }
 
 #confirm-wrap-container {
