@@ -107,3 +107,23 @@ modalWindowCancel.className = "button-cancel";
 modalWindowCancel.name = "cancel";
 modalWindowCancel.textContent = "Cancel";
 modalWindowWrap.append(modalWindowCancel);
+
+export let alertAttentionContainer = document.createElement("div");
+alertAttentionContainer.id = "alert-wrap-container";
+container.append(alertAttentionContainer);
+
+export let alertAttentionWrap = document.createElement("div");
+alertAttentionWrap.id = "alert-wrap";
+alertAttentionContainer.append(alertAttentionWrap);
+
+const closeAlert = document.createElement("div");
+closeAlert.className = "todo-close";
+alertAttentionWrap.append(closeAlert);
+const btnCloseAlert = document.createElement("span");
+btnCloseAlert.className = "btn-close";
+btnCloseAlert.classList.add("alert");
+closeAlert.append(btnCloseAlert);
+
+export let alertAttentionMessage = document.createElement("p");
+alertAttentionMessage.id = "alert-message";
+alertAttentionWrap.append(alertAttentionMessage);

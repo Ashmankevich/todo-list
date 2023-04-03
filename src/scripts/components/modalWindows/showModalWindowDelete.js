@@ -1,6 +1,5 @@
-import { showModal } from "./modalWindow";
+import { showModal, complete } from "./modalWindow";
 import { deleteAllItems } from "../buttons/deleteAll";
-import { complete } from "./modalWindow";
 
 function showModalWindowDelete() {
   showModal("You are going to delete all tasks. Are you sure?");

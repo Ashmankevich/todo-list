@@ -16,7 +16,7 @@ class getTask {
 function addItem() {
   let isEmpty = !enterItem.value.trim();
   if (isEmpty) {
-    showModalWindowAttention();
+    showModalWindowAttention("If you want to continue, please enter some todo");
   } else {
     allTasks.push(new getTask());
     updateLocalStorage();

@@ -245,26 +245,22 @@ body {
 
 .input-enter-todo::-webkit-input-placeholder,
 .input-search-todo::-webkit-input-placeholder {
-  color: #212529;
-  opacity: 0.5;
+  color: rgba(33, 37, 41, 0.5);
 }
 
 .input-enter-todo:-ms-input-placeholder,
 .input-search-todo:-ms-input-placeholder {
-  color: #212529;
-  opacity: 0.5;
+  color: rgba(33, 37, 41, 0.5);
 }
 
 .input-enter-todo::-ms-input-placeholder,
 .input-search-todo::-ms-input-placeholder {
-  color: #212529;
-  opacity: 0.5;
+  color: rgba(33, 37, 41, 0.5);
 }
 
 .input-enter-todo::placeholder,
 .input-search-todo::placeholder {
-  color: #212529;
-  opacity: 0.5;
+  color: rgba(33, 37, 41, 0.5);
 }
 
 @media (max-width: 767px) {
@@ -410,6 +406,18 @@ body {
   cursor: pointer;
 }
 
+.btn-close.alert {
+  top: -45px;
+  left: 280px;
+}
+
+@media (max-width: 460px) {
+  .btn-close.alert {
+    top: -40px;
+    left: 225px;
+  }
+}
+
 .btn-close:before,
 .btn-close:after {
   position: absolute;
@@ -434,7 +442,8 @@ body {
   word-break: break-word;
 }
 
-#confirm-wrap {
+#confirm-wrap,
+#alert-wrap {
   display: inline-block;
   padding: 60px;
   width: 400px;
@@ -444,36 +453,51 @@ body {
 }
 
 @media (max-width: 460px) {
-  #confirm-wrap {
+  #confirm-wrap,
+  #alert-wrap {
     padding: 30px;
     width: 300px;
   }
 }
 
-#confirm-message {
+#alert-wrap {
+  padding-bottom: 20px;
+}
+
+@media (max-width: 460px) {
+  #alert-wrap {
+    padding: 50px 20px 10px;
+  }
+}
+
+#confirm-message,
+#alert-message {
   font-size: 25px;
   color: white;
   margin-bottom: 40px;
 }
 
 @media (max-width: 460px) {
-  #confirm-message {
+  #confirm-message,
+  #alert-message {
     font-size: 20px;
   }
 }
 
-#confirm-wrap-container {
+#confirm-wrap-container,
+#alert-wrap-container {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9999;
+  z-index: 2;
   display: none;
   width: 100%;
   height: 100%;
   text-align: center;
 }
 
-#confirm-wrap-container:before {
+#confirm-wrap-container:before,
+#alert-wrap-container:before {
   display: inline-block;
   height: 100%;
   content: "";
@@ -484,11 +508,12 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9000;
+  z-index: 1;
   width: 100%;
   height: 100%;
-  background-color: #312e2e;
-  opacity: 0.9;
+  background-color: rgba(49, 46, 46, 0.6);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
 }
 
 .button-ok,

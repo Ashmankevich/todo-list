@@ -25,10 +25,10 @@ function showModal(text) {
 
   message.innerHTML = text;
 
-  buttonCancel.addEventListener("click", () => complete(null));
+  buttonCancel.addEventListener("click", () => complete());
 
   document.addEventListener("keydown", function (e) {
-    e.key == "Escape" ? complete(null) : null;
+    e.key == "Escape" ? complete() : null;
   });
 
   buttonOk.onkeydown = function (e) {
@@ -48,4 +48,4 @@ function showModal(text) {
   container.style.display = "block";
 }
 
-export { showModal, complete };
+export { showModal, showCover, complete };
