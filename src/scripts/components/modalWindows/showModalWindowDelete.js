@@ -10,6 +10,13 @@ function showModalWindowDelete() {
     deleteAllItems();
     complete();
   });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      deleteAllItems();
+      complete();
+    }
+  });
 }
 
 export { showModalWindowDelete };

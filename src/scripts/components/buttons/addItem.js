@@ -26,10 +26,6 @@ function addItem() {
   }
 }
 
-function pressedEnter(keyPressed) {
-  keyPressed.key === "Enter" ? addItem() : null;
-}
-
 function renderTemplate() {
   listItems.innerHTML = "";
   const active = allTasks.filter((item) => item.isChecked === false);
