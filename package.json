@@ -1,6 +1,6 @@
 {
-  "name": "app_todo_ver.3",
-  "version": "1.0.0",
+  "name": "todo-list",
+  "version": "2.0.0",
   "description": "",
   "type": "module",
   "scripts": {
