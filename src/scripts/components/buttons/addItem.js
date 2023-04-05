@@ -26,6 +26,10 @@ function addItem() {
   }
 }
 
+enterItem.addEventListener("keydown", function (event) {
+  event.code == "Enter" ? addItem() : null;
+});
+
 function renderTemplate() {
   listItems.innerHTML = "";
   const active = allTasks.filter((item) => item.isChecked === false);
@@ -76,4 +80,4 @@ function createTemplate(obj) {
   dateTodo.append(obj.date);
 }
 
-export { addItem, pressedEnter, renderTemplate };
+export { addItem, renderTemplate };
