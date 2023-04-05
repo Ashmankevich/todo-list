@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Raleway&display=swap");
+@import 'mixin';
+@import 'color';
 
 *::before,
 *::after {
@@ -11,37 +13,6 @@
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
   outline: none;
-}
-
-$text: rgb(255, 255, 255);
-$backgroundInput: rgb(216, 223, 240);
-$backgroundInputFocus: rgb(233, 233, 233);
-$backgroundBody:rgb(110, 119, 122);
-$backgroundMainPlate: rgb(77, 75, 78);
-$borderInput:rgb(189, 189, 189);
-$inputFocus:rgb(33, 37, 41);
-$inputFocusShadow:rgba(155, 149, 149, 0.25);
-$inputPlaceholder:rgba(33, 37, 41, 0.5);
-
-@mixin Input {
-  margin: 0 15px;
-  padding: 0 20px;
-  font-size: 14px;
-  line-height: 19px;
-  background-color: $backgroundInput;
-  border: none;
-  border-radius: 10px;
-  transition: all 0.3s linear 0s;
-  &:focus {
-    color: $inputFocus;
-    background-color: $backgroundInputFocus;
-    border-color: $borderInput;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem $inputFocusShadow;
-  }
-  &::placeholder {
-    color: $inputPlaceholder;
-  }
 }
 
 body {
@@ -63,40 +34,6 @@ body {
   display: flex;
   justify-content: space-between;
 }
-
-$btnNormalAdd: rgb(94, 158, 94);
-$btnHoverAdd: rgb(77, 168, 77);
-$btnFocusAdd: rgb(78, 117, 78);
-$btnActiveAdd: rgb(54, 153, 54);
-
-$btnNormalDelete: rgb(236, 79, 79);
-$btnHoverDelete: rgb(235, 21, 21);
-$btnFocusDelete:rgb(173, 41, 41);
-$btnActiveDelete: rgb(255, 67, 67);
-
-$btnNormalShowHide: rgb(226, 177, 85);
-$btnHoverShowHide: rgb(211, 167, 84);
-$bntFocusShowHide:rgb(199, 162, 92);
-$btnActiveShowHide: rgb(194, 163, 107);
-
-$btnText: rgb(245, 245, 245);
-
-@mixin Btn {
-   font-size: 18px;
-   line-height: 22px;
-   color: $btnText;
-   display: block;
-   text-transform: capitalize;
-   border-radius: 10px;
-   text-align: center;
-   padding: 12px;
-   border: none;
-   cursor: pointer;
-   transition: all 0.3s linear;
-   @media (max-width: 767px) {
-     padding: 9px;
-   }
- }
 
 .btn {
   @include Btn();
@@ -191,8 +128,8 @@ $btnText: rgb(245, 245, 245);
 .hide-completed[disabled],
 .show-completed[disabled],
 .input-search-todo[disabled] {
-  color: rgb(210, 213, 219);
-  background: rgb(108, 117, 137);
+  color: $inputSearch;
+  background: $backgroundInputSearch;
   cursor: not-allowed;
 }
 
@@ -281,7 +218,7 @@ $btnText: rgb(245, 245, 245);
   margin: 10px auto;
   border-radius: 15px;
   padding: 30px;
-  background-color: rgb(87, 92, 105);
+  background-color: $itemRegular;
   color: $text;
   @media (max-width: 767px) {
     padding: 30px 30px 30px 15px;
@@ -289,7 +226,7 @@ $btnText: rgb(245, 245, 245);
 }
 
 .item-complete {
-  background-color: rgb(99, 177, 103);
+  background-color: $itemComplete;
 }
 
 .text-complete {
@@ -304,7 +241,7 @@ $btnText: rgb(245, 245, 245);
 .todo-date {
   font-size: 14px;
   padding-top: 20px;
-  color: rgb(117, 129, 153);
+  color:$itemDate;
   @media (max-width: 767px) {
     display: none;
   }
@@ -340,7 +277,7 @@ $btnText: rgb(245, 245, 245);
   content: " ";
   height: 33px;
   width: 2px;
-  background-color: rgb(236, 121, 121);
+  background-color: $btnCloseItem;
 }
 
 .btn-close:before {
@@ -361,7 +298,7 @@ $btnText: rgb(245, 245, 245);
   padding: 60px;
   width: 400px;
   border-radius: 30px;
-  background: rgb(82, 89, 122);
+  background: $modalWindow;
   vertical-align: middle;
   @media (max-width: 460px) {
     padding: 30px;
@@ -413,7 +350,7 @@ $btnText: rgb(245, 245, 245);
   z-index: 1;
   width: 100%;
   height: 100%;
-  background-color: rgba(49, 46, 46, 0.7);
+  background-color: $coverOverlay;
   backdrop-filter: blur(3px);
 }
 
@@ -426,14 +363,14 @@ $btnText: rgb(245, 245, 245);
   border-radius: 10px;
   font-size: 18px;
   color: $text;
-  background-color: rgb(100, 106, 122);
+  background-color: $btnOkCancel;
   &:hover {
     cursor: pointer;
-    background-color: rgb(118, 131, 165);
+    background-color: $btnOkCancelHover;
   }
   &:active {
-    box-shadow: 0px 0px 10px 0px rgb(76, 100, 160) inset;
-    background-color: rgb(76, 100, 160);
+    box-shadow: 0px 0px 10px 0px $btnOkCancelActive inset;
+    background-color: $btnOkCancelActive;
   }
 }
 
@@ -472,7 +409,7 @@ $btnText: rgb(245, 245, 245);
   height: 1.25em;
   flex-shrink: 0;
   flex-grow: 0;
-  border: 1px solid rgb(173, 181, 189);
+  border: 1px solid $checkboxBorder;
   border-radius: 0.25em;
   margin-right: 1.5em;
   background-repeat: no-repeat;
@@ -484,28 +421,28 @@ $btnText: rgb(245, 245, 245);
 }
 
 .custom-checkbox > input:not(:disabled):not(:checked) + span:hover::before {
-  border-color: rgb(179, 215, 255);
+  border-color: $checkboxActiveHover;
 }
 
 .custom-checkbox > input:not(:disabled):active + span::before {
-  background-color: rgb(179, 215, 255);
-  border-color: rgb(179, 215, 255);
+  background-color: $checkboxActiveHover;
+  border-color: $checkboxActiveHover;
 }
 
 .custom-checkbox > input:focus + span::before {
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  box-shadow: 0 0 0 0.2rem $checkboxFocus;
 }
 
 .custom-checkbox > input:focus:not(:checked) + span::before {
-  border-color: rgb(128, 189, 255);
+  border-color: $btnOkCancelHover;
 }
 
 .custom-checkbox > input:checked + span::before {
-  border-color: rgb(11, 118, 239);
-  background-color: rgb(11, 118, 239);
+  border-color: $checkboxChecked;
+  background-color: $checkboxChecked;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
 }
 
 .custom-checkbox > input:disabled + span::before {
-  background-color: rgb(233, 236, 239);
+  background-color: $backgroundInputFocus;
 }
