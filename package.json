@@ -4,29 +4,32 @@
   "description": "",
   "type": "module",
   "scripts": {
-   "dev": "parcel ./src/index.html",
-   "build": "parcel build ./src/index.html --no-source-maps",
-   "predeploy": "npm run dev",
-   "deploy": "gh-pages -d dev"
+    "dev": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html --no-source-maps",
+    "predeploy": "npm run dev",
+    "deploy": "gh-pages -d dev"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ashmankevich/to_do_list.git"
+    "url": "git+https://github.com/Ashmankevich/todo-list.git"
   },
   "keywords": [
-   "js",
-   "html",
-   "scc",
-   "scss"
+    "js",
+    "html",
+    "scc",
+    "scss"
   ],
   "author": "Andrew Ashmankevich",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Ashmankevich/to_do_list/issues"
+    "url": "https://github.com/Ashmankevich/todo-list/issues"
   },
-  "homepage": "https://github.com/Ashmankevich/to_do_list#readme",
+  "homepage": "https://github.com/Ashmankevich/todo-list#readme",
   "devDependencies": {
     "parcel": "^2.8.3",
     "parcel-bundler": "^1.12.5"
+  },
+  "dependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
