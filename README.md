@@ -3,16 +3,11 @@
 
 Here in this app users have accesss to a wide range of different features: 
 
-- [x] creating list of tasks;
-- [x] filling in the description and editting the text of a task;
-- [x] changing the position of a task card on the list;
-- [x] moving a task card through the lists (using Drag N Drop);
-- [x] deleting a task card or all the fullfilled ones;
-- [x] assigning a user a task card;
-- [x] setting a priority for completion in each card; 
-
-Besides there is a convenient filter filtering the cards by various parameters, as well as a task search.
-For the convenience of the user, there's an apportunity to change the color theme (from dark to light).
+<li>creating list of tasks</li>
+<li>delete the last task or all tasks</li>
+<li>mark a completed task</li>
+<li>hide and show a completed tasks</li>
+<li>search the entered task in addition to the deleted ones</li>
 
 ### The benefits of using a ToDo-List
 
