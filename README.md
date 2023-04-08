@@ -1,5 +1,6 @@
 # ToDo-list 
-**It’s a list of tasks you need to complete or things that you want to do.**
+**It’s a list of tasks you need to complete or things that you want to do**
+## [tap to check demo](https://ashmankevich.github.io/todo-list/)
 
 Here in this app users have accesss to a wide range of different features: 
 
@@ -23,15 +24,20 @@ Here in this app users have accesss to a wide range of different features:
 <li>SСSS</li>
 <li>HTML5</li>
 
-### How to start
+### Installation
 
-1. Download a repository from github:
-
-> git@github.com:Ashmankevich/todo-list.git
-
-2. `npm i`
-
-3. `npm run dev`
+1. Clone the repo
+   ```sh
+   git clone git@github.com:Ashmankevich/todo-list.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Run app
+   ```sh
+   npm start
+   ```
 
 ### Environment
 
