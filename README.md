@@ -1,9 +1,13 @@
-# Task-manager 
+# Todo-list 
 **This is a web-application to help manage various tasks.**
 To organize the workspace for your tasks, we created a multi-function board with cards, which are distributed to different columns depending on the implementation phase: backlog, in progress, review or done.
 Here in this app users have accesss to a wide range of different features: 
 
-![This is an image](./video_sample.gif)
+
+
+https://user-images.githubusercontent.com/93611381/230709112-f2304188-7274-49e8-86c0-84d26338e6dc.mp4
+
+
 
 - [x] creating task cards;
 - [x] filling in the description and editting the text of a task;
@@ -18,16 +22,16 @@ For the convenience of the user, there's an apportunity to change the color them
 
 ### Technologies:
 
- <li>HTML5</li>
- <li>SСSS</li>
- <li>Javascript</li>
- <li>Bootstrap</li>
+<li>Javascript</li>
+<li>SСSS</li>
+<li>HTML5</li>
+ 
 
 ### How to start
 
 1. Download a repository from github:
 
-> https://github.com/karinakardash/Task-manager
+> git@github.com:Ashmankevich/todo-list.git
 
 2. `npm i`
 
