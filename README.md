@@ -41,7 +41,7 @@ Here in this app users have accesss to a wide range of different features:
 
 ### Environment
 
-The project is built using the parcel package
+The project is built using the parcel package.
 
 ### Other important information
 
@@ -51,6 +51,6 @@ In this [CONTRIBUTING](CONTRIBUTING.md) guide you will get an overview of the co
 
 Read  our [SECURITY](SECURITY.md) policy and Your responsibility.
 
-Check our [LICENSE](https://github.com/Ashmankevich/todo-list/blob/main/LICENSE)
+Check our [LICENSE](https://github.com/Ashmankevich/todo-list/blob/main/LICENSE).
 
-Use standart [BUG REPORT TEMPLATE](https://github.com/Ashmankevich/todo-list/blob/main/.github/ISSUE_TEMPLATE/bug_report.md) and [FEATURE REQUEST TEMPLATE](https://github.com/Ashmankevich/todo-list/blob/main/.github/ISSUE_TEMPLATE/feature_request.md) for create a bug report or feature request
+Use standart [BUG REPORT TEMPLATE](https://github.com/Ashmankevich/todo-list/blob/main/.github/ISSUE_TEMPLATE/bug_report.md) and [FEATURE REQUEST TEMPLATE](https://github.com/Ashmankevich/todo-list/blob/main/.github/ISSUE_TEMPLATE/feature_request.md) for create a bug report or feature request.
