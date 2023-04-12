@@ -271,6 +271,11 @@ body {
   }
 }
 
+.input-search-todo {
+  margin-right: 0;
+  padding-left: 50px;
+}
+
 @media (max-width: 767px) {
   .input-search-todo {
     margin: 0 10px;
@@ -402,9 +407,19 @@ body {
   position: absolute;
   right: 0px;
   top: -23px;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
+}
+
+.btn-close:hover {
+  border-radius: 50%;
+  background-color: #4d4b4e;
+}
+
+.btn-search {
+  right: 25px;
+  top: 26px;
 }
 
 .btn-close.alert {
@@ -422,9 +437,10 @@ body {
 .btn-close:before,
 .btn-close:after {
   position: absolute;
-  left: 15px;
+  left: 19px;
+  top: 4px;
   content: " ";
-  height: 33px;
+  height: 30px;
   width: 2px;
   background-color: #ec7979;
 }
@@ -437,6 +453,31 @@ body {
 .btn-close:after {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+
+.gg-search {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 2px solid;
+  border-radius: 100%;
+  top: 11px;
+  right: 287px;
+  color: #4d4b4e;
+}
+
+.gg-search::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 3px;
+  width: 2px;
+  height: 12px;
+  background: #4d4b4e;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 12px;
+  left: 17px;
 }
 
 .task-desc {

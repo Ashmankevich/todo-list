@@ -6,6 +6,7 @@ import {
   showCompleted,
   hideCompleted,
   inputSearch,
+  closeSearch,
 } from "../scripts/components/HTMLElements";
 import { update } from "./localStorage";
 import { hideItem } from "./components/buttons/hideItem";
@@ -16,6 +17,7 @@ import { addItem } from "./components/buttons/addItem";
 import { deleteItem } from "./components/buttons/deleteItem";
 import { completeItem } from "./components/completeItem";
 import { showModalWindowDelete } from "./components/modalWindows/showModalWindowDelete";
+import { clearSearch } from "./components/buttons/clearSearch";
 
 window.addEventListener("load", update);
 add.addEventListener("click", addItem);
@@ -26,3 +28,4 @@ listItems.addEventListener("change", completeItem);
 hideCompleted.addEventListener("click", hideItem);
 showCompleted.addEventListener("click", showItem);
 inputSearch.addEventListener("input", search);
+closeSearch.addEventListener("click", clearSearch);

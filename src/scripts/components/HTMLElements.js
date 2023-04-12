@@ -75,8 +75,21 @@ additionalItems.append(showCompleted);
 
 export const inputSearch = document.createElement("input");
 inputSearch.className = "input-search-todo";
-inputSearch.setAttribute("placeholder", "Search...");
 additionalItems.append(inputSearch);
+
+export const wrapIcon = document.createElement("div");
+additionalItems.append(wrapIcon);
+export const searchIcon = document.createElement("div");
+searchIcon.className = "gg-search";
+wrapIcon.append(searchIcon);
+
+export const closeSearch = document.createElement("div");
+closeSearch.className = "todo-close";
+closeSearch.classList.add("btn-search");
+additionalItems.append(closeSearch);
+export const btnCloseSearch = document.createElement("span");
+btnCloseSearch.className = "btn-close";
+closeSearch.append(btnCloseSearch);
 
 export const listItems = document.createElement("ul");
 listItems.className = "wrapper list-todo";
