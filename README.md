@@ -1,8 +1,9 @@
 # ToDo-list 
 **It’s a list of tasks you need to complete or things that you want to do**
-## [tap to check demo](https://ashmankevich.github.io/todo-list/)
 
 Here in this app users have accesss to a wide range of different features: 
+
+![15 04 2023_17 18 19_REC _online-video-cutter com_](https://user-images.githubusercontent.com/93611381/232230982-c5b88f5e-815d-407b-9632-cff6ae059b8c.gif)
 
 <li>creating list of tasks</li>
 <li>delete the last task or all tasks</li>
