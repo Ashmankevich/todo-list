@@ -27,10 +27,6 @@ function showModal(text) {
 
   buttonCancel.addEventListener("click", () => complete());
 
-  document.addEventListener("keydown", function (e) {
-    e.key == "Escape" ? complete() : null;
-  });
-
   buttonOk.onkeydown = function (e) {
     if (e.key == "Tab" && e.shiftKey) {
       buttonCancel.focus();

@@ -73,15 +73,16 @@ showCompleted.className = "btn show-completed";
 showCompleted.textContent = "Show";
 additionalItems.append(showCompleted);
 
-export const inputSearch = document.createElement("input");
-inputSearch.className = "input-search-todo";
-additionalItems.append(inputSearch);
-
 export const wrapIcon = document.createElement("div");
+wrapIcon.className = "wrap-search";
 additionalItems.append(wrapIcon);
 export const searchIcon = document.createElement("div");
 searchIcon.className = "gg-search";
 wrapIcon.append(searchIcon);
+
+export const inputSearch = document.createElement("input");
+inputSearch.className = "input-search-todo";
+additionalItems.append(inputSearch);
 
 export const closeSearch = document.createElement("div");
 closeSearch.className = "todo-close";
@@ -89,32 +90,33 @@ closeSearch.classList.add("btn-search");
 additionalItems.append(closeSearch);
 export const btnCloseSearch = document.createElement("span");
 btnCloseSearch.className = "btn-close";
+btnCloseSearch.classList.add("icon");
 closeSearch.append(btnCloseSearch);
 
 export const listItems = document.createElement("ul");
 listItems.className = "wrapper list-todo";
 container.append(listItems);
 
-export let modalWindowContainer = document.createElement("div");
+export const modalWindowContainer = document.createElement("div");
 modalWindowContainer.id = "confirm-wrap-container";
 container.append(modalWindowContainer);
 
-export let modalWindowWrap = document.createElement("div");
+export const modalWindowWrap = document.createElement("div");
 modalWindowWrap.id = "confirm-wrap";
 modalWindowContainer.append(modalWindowWrap);
 
-export let modalWindowMessage = document.createElement("p");
+export const modalWindowMessage = document.createElement("p");
 modalWindowMessage.id = "confirm-message";
 modalWindowWrap.append(modalWindowMessage);
 
-export let modalWindowOK = document.createElement("button");
+export const modalWindowOK = document.createElement("button");
 modalWindowOK.type = "button";
 modalWindowOK.className = "button-ok";
 modalWindowOK.name = "ok";
 modalWindowOK.textContent = "Ok";
 modalWindowWrap.append(modalWindowOK);
 
-export let modalWindowCancel = document.createElement("button");
+export const modalWindowCancel = document.createElement("button");
 modalWindowCancel.type = "button";
 modalWindowCancel.className = "button-cancel";
 modalWindowCancel.name = "cancel";
@@ -129,10 +131,10 @@ export let alertAttentionWrap = document.createElement("div");
 alertAttentionWrap.id = "alert-wrap";
 alertAttentionContainer.append(alertAttentionWrap);
 
-const closeAlert = document.createElement("div");
+export const closeAlert = document.createElement("div");
 closeAlert.className = "todo-close";
 alertAttentionWrap.append(closeAlert);
-const btnCloseAlert = document.createElement("span");
+export const btnCloseAlert = document.createElement("span");
 btnCloseAlert.className = "btn-close";
 btnCloseAlert.classList.add("alert");
 closeAlert.append(btnCloseAlert);

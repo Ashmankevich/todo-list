@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Raleway&display=swap");
-@import 'mixin';
-@import 'color';
+@import "mixin";
+@import "color";
 
 *::before,
 *::after {
@@ -17,7 +17,7 @@
 
 body {
   background-color: $backgroundBody;
-  height:2500px;
+  height: 2500px;
 }
 
 .container {
@@ -46,13 +46,13 @@ body {
   width: 100%;
   background-color: $btnNormalDelete;
   &:hover {
-   background-color: $btnHoverDelete;
+    background-color: $btnHoverDelete;
   }
-  &:focus{
-   background-color: $btnFocusDelete;
+  &:focus {
+    background-color: $btnFocusDelete;
   }
   &:active {
-   background-color: $btnActiveDelete;
+    background-color: $btnActiveDelete;
   }
   @media (max-width: 767px) {
     max-width: 85px;
@@ -67,7 +67,7 @@ body {
     background-color: $btnHoverAdd;
   }
   &:focus {
-   background-color: $btnFocusAdd;
+    background-color: $btnFocusAdd;
   }
   &:active {
     background-color: $btnActiveAdd;
@@ -80,14 +80,14 @@ body {
   max-width: 80px;
   width: 100%;
   background-color: $btnNormalShowHide;
-  &:hover{
-   background-color: $btnHoverShowHide;
+  &:hover {
+    background-color: $btnHoverShowHide;
   }
   &:focus {
-   background-color: $bntFocusShowHide;
+    background-color: $bntFocusShowHide;
   }
-  &:active{
-   background-color: $btnActiveShowHide;
+  &:active {
+    background-color: $btnActiveShowHide;
   }
 }
 
@@ -106,13 +106,17 @@ body {
   }
 }
 
+.show-completed {
+  margin-right: 5px;
+}
+
 @media (max-width: 767px) {
   .btn.delete-last {
     display: none;
   }
   .show-completed {
-   margin: 0;
- }
+    margin: 0;
+  }
 }
 
 .hide-completed {
@@ -122,6 +126,12 @@ body {
     font-size: 14px;
   }
 }
+
+@media (max-width: 500px) {
+  .show-completed, .hide-completed {
+   max-width: 60px;
+  }
+ }
 
 .add[disabled],
 .delete-last[disabled],
@@ -155,15 +165,20 @@ body {
   }
 }
 
-.input-search-todo{
-   margin-right: 0;
-   padding-left: 50px;
+.input-search-todo {
+  margin-left: 0;
+  padding-left: 45px;
+  padding-right: 50px;
+  @media (max-width: 500px) {
+   padding-left: 35px;
+ }
 }
 
-@media (max-width: 767px) {
-  .input-search-todo {
-    margin: 0 10px;
-  }
+@media (max-width:767px) {
+   .input-search-todo {
+      margin-left: 0;
+      margin-right: 10px;
+   }
 }
 
 .addition-items {
@@ -247,7 +262,7 @@ body {
 .todo-date {
   font-size: 14px;
   padding-top: 20px;
-  color:$itemDate;
+  color: $itemDate;
   @media (max-width: 767px) {
     display: none;
   }
@@ -266,30 +281,46 @@ body {
   height: 40px;
   cursor: pointer;
   &:hover {
-   border-radius:50%;
-   background-color: $backgroundMainPlate;
- }
+    border-radius: 50%;
+    background-color: $backgroundInputSearch;
+  }
 }
 
 .btn-search {
-   right: 25px;
-   top: 26px;
+  right: 25px;
+  top: 26px;
+  display: none;
+  @media (max-width: 767px) {
+    top: 23px;
+    right: 15px;
+  }
+}
+
+.btn-close.icon:hover {
+  background-color: $backgroundInput;
+}
+
+.btn-close.icon {
+   @media (max-width: 500px) {
+      right: -10px;
+      top: -17px;
+    }
 }
 
 .btn-close.alert {
-   top:-45px;
-   left: 280px;
-   @media (max-width: 460px) {
-      top: -40px;
-      left: 225px;
-    }
+  top: -45px;
+  left: 280px;
+  @media (max-width: 460px) {
+    top: -40px;
+    left: 225px;
+  }
 }
 
 .btn-close:before,
 .btn-close:after {
   position: absolute;
   left: 19px;
-  top:4px;
+  top: 4px;
   content: " ";
   height: 30px;
   width: 2px;
@@ -304,27 +335,55 @@ body {
   transform: rotate(-45deg);
 }
 
+.btn-close.icon:before,
+.btn-close.icon:after {
+   @media (max-width: 500px) {
+      height: 20px;
+      width: 1px;
+    }
+  
+}
+
 .gg-search {
-   position: relative;
-   width: 20px;
-   height: 20px;
-   border: 2px solid;
-   border-radius: 100%;
-   top:11px;
-   right:287px;
-   color: $backgroundMainPlate;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 2px solid;
+  border-radius: 100%;
+  top: 11px;
+  left: 33px;
+  color: $backgroundMainPlate;
+
+  @media (max-width: 767px) {
+    top: 8px;
+    left: 32px;
+  }
+
+  @media (max-width: 500px) {
+    width: 15px;
+    height: 15px;
+    top: 12px;
+    left: 25px;
+    border: 1px solid;
+  }
 }
 .gg-search::after {
-   content: "";
-   display: block;
-   position: absolute;
-   border-radius: 3px;
-   width: 2px;
-   height: 12px;
-   background: $backgroundMainPlate;
-   transform: rotate(-45deg);
-   top: 12px;
-   left: 17px
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 3px;
+  width: 2px;
+  height: 12px;
+  background: $backgroundMainPlate;
+  transform: rotate(-45deg);
+  top: 12px;
+  left: 17px;
+  @media (max-width: 500px) {
+   width: 1px;
+   height: 8px;
+   left: 15px;
+   top: 10px;
+ }
 }
 
 .task-desc {
@@ -346,10 +405,10 @@ body {
 }
 
 #alert-wrap {
-   padding-bottom: 20px;
-   @media (max-width: 460px) {
-      padding:50px 20px 10px;
-    }
+  padding-bottom: 20px;
+  @media (max-width: 460px) {
+    padding: 50px 20px 10px;
+  }
 }
 
 #confirm-message,

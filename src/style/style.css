@@ -162,6 +162,10 @@ body {
   }
 }
 
+.show-completed {
+  margin-right: 5px;
+}
+
 @media (max-width: 767px) {
   .btn.delete-last {
     display: none;
@@ -179,6 +183,12 @@ body {
   .hide-completed {
     margin: 0 10px;
     font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  .show-completed, .hide-completed {
+    max-width: 60px;
   }
 }
 
@@ -272,13 +282,21 @@ body {
 }
 
 .input-search-todo {
-  margin-right: 0;
-  padding-left: 50px;
+  margin-left: 0;
+  padding-left: 45px;
+  padding-right: 50px;
+}
+
+@media (max-width: 500px) {
+  .input-search-todo {
+    padding-left: 35px;
+  }
 }
 
 @media (max-width: 767px) {
   .input-search-todo {
-    margin: 0 10px;
+    margin-left: 0;
+    margin-right: 10px;
   }
 }
 
@@ -414,12 +432,31 @@ body {
 
 .btn-close:hover {
   border-radius: 50%;
-  background-color: #4d4b4e;
+  background-color: #6c7589;
 }
 
 .btn-search {
   right: 25px;
   top: 26px;
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .btn-search {
+    top: 23px;
+    right: 15px;
+  }
+}
+
+.btn-close.icon:hover {
+  background-color: #d8dff0;
+}
+
+@media (max-width: 500px) {
+  .btn-close.icon {
+    right: -10px;
+    top: -17px;
+  }
 }
 
 .btn-close.alert {
@@ -455,6 +492,14 @@ body {
           transform: rotate(-45deg);
 }
 
+@media (max-width: 500px) {
+  .btn-close.icon:before,
+  .btn-close.icon:after {
+    height: 20px;
+    width: 1px;
+  }
+}
+
 .gg-search {
   position: relative;
   width: 20px;
@@ -462,8 +507,25 @@ body {
   border: 2px solid;
   border-radius: 100%;
   top: 11px;
-  right: 287px;
+  left: 33px;
   color: #4d4b4e;
+}
+
+@media (max-width: 767px) {
+  .gg-search {
+    top: 8px;
+    left: 32px;
+  }
+}
+
+@media (max-width: 500px) {
+  .gg-search {
+    width: 15px;
+    height: 15px;
+    top: 12px;
+    left: 25px;
+    border: 1px solid;
+  }
 }
 
 .gg-search::after {
@@ -478,6 +540,15 @@ body {
           transform: rotate(-45deg);
   top: 12px;
   left: 17px;
+}
+
+@media (max-width: 500px) {
+  .gg-search::after {
+    width: 1px;
+    height: 8px;
+    left: 15px;
+    top: 10px;
+  }
 }
 
 .task-desc {
